@@ -7,11 +7,15 @@ import { inRange, isoDay, readRange } from "@/lib/range";
 import { RangePicker } from "@/components/RangePicker";
 import { CampaignTable } from "./CampaignTable";
 
-/** A date written in the tab name ("13/07", "Family Office list 22/9/26"), when there is one. */
+/** A date written in the tab name ("13/07", "Family Office list 22/9/26", "HNI - 25OCT"), when there is one. */
 function dateInTabName(tab: string, now: Date) {
-  const m = tab.match(/\b(\d{1,2}\/\d{1,2}(?:\/\d{2,4})?)\b/);
-  if (!m) return null;
-  return parseDate(m[1].split("/").length === 2 ? `${m[1]}/${now.getFullYear()}` : m[1], now);
+  const slash = tab.match(/\b(\d{1,2}\/\d{1,2}(?:\/\d{2,4})?)\b/);
+  if (slash) return parseDate(slash[1].split("/").length === 2 ? `${slash[1]}/${now.getFullYear()}` : slash[1], now);
+  const dayMonth = tab.match(/\b(\d{1,2})\s*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b/i);
+  if (dayMonth) return parseDate(`${dayMonth[1]} ${dayMonth[2]}`, now);
+  const monthDay = tab.match(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s*(\d{1,2})\b/i);
+  if (!monthDay) return null;
+  return parseDate(`${monthDay[2]} ${monthDay[1]}`, now);
 }
 
 export default async function CampaignsPage({ searchParams }: { searchParams: Promise<{ range?: string; from?: string; to?: string }> }) {
