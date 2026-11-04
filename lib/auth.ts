@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { env } from "./env";
 import { readSpreadsheet } from "./google";
 import { db } from "./mongo";
+import { verifyPin } from "./pinVault";
 
 export const SESSION_COOKIE = "hub_session";
 const SESSION_HOURS = 12;
@@ -62,7 +63,7 @@ export async function login(usernameRaw: string, pin: string): Promise<LoginResu
   }
 
   const user = (await users()).find((x) => x.username.toLowerCase() === username);
-  const valid = !!user && user.role === "admin" && sameString(user.pin, pin);
+  const valid = !!user && user.role === "admin" && (await verifyPin(pin, user.pin));
   if (!valid) {
     const n = (lock?.n ?? 0) + 1;
     const locked = n >= MAX_ATTEMPTS;
