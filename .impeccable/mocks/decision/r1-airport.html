@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:"Fira Sans",sans-serif;background:#EDEDED;color:#111;font-size:14px}
+.band{background:#FFD200;height:72px;display:flex;align-items:stretch;border-bottom:4px solid #111}
+.band .brand{background:#111;color:#FFD200;display:flex;align-items:center;padding:0 24px;font-weight:700;font-size:18px}
+.band nav{display:flex}
+.band a{display:flex;align-items:center;gap:10px;padding:0 22px;color:#111;text-decoration:none;font-weight:600;font-size:17px;border-right:1px solid rgba(0,0,0,.25)}
+.band a i{width:32px;height:32px;background:#111;color:#fff;display:grid;place-items:center;font-style:normal;font-size:14px;font-weight:700}
+.band a.on{background:#111;color:#FFD200}
+.band a.on i{background:#FFD200;color:#111}
+.band .me{margin-left:auto;display:flex;align-items:center;padding:0 24px;font-weight:500}
+.next{background:#111;color:#fff;display:flex;align-items:center;height:56px;padding:0 28px;gap:16px;font-size:18px}
+.next b{color:#FFD200}
+.next .arrow{margin-left:auto;background:#FFD200;color:#111;font-weight:700;padding:8px 16px}
+main{padding:24px 28px;display:grid;grid-template-columns:420px 1fr;gap:24px}
+.gate{background:#fff;padding:20px;display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;margin-bottom:16px}
+.gate .big{background:#111;color:#FFD200;font-size:110px;font-weight:700;line-height:150px;text-align:center}
+.gate p{font-size:18px;font-weight:600}
+.gate small{display:block;color:#555;font-size:14px;font-weight:400;margin-top:6px}
+.kpi{background:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #DDD}
+.kpi b{font-size:26px;font-weight:700}
+.prog{height:10px;background:#DDD;margin-top:10px}.prog i{display:block;height:100%;width:62.4%;background:#111}
+.wk{background:#fff;padding:18px 20px}
+.wk b{font-size:44px;font-weight:700}
+.wk span{color:#555}
+section.t{background:#fff}
+section.t h2{padding:16px 20px;font-size:20px;font-weight:700;display:flex;justify-content:space-between;border-bottom:3px solid #111}
+section.t h2 span{font-weight:400;font-size:14px;color:#555}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:10px 20px;font-size:13px;color:#555;font-weight:500;border-bottom:1px solid #DDD}
+td{padding:12px 20px;border-bottom:1px solid #EEE;font-size:15px}
+.late{color:#D9341E;font-weight:700}
+.check{margin:16px 20px 20px;display:flex;border:2px solid #111}
+.check div{flex:1;padding:14px;color:#555}
+.check button{background:#111;color:#FFD200;border:0;padding:0 24px;font:700 16px "Fira Sans"}
+</style></head><body>
+<div class="band"><span class="brand">Investor Hub</span>
+<nav><a class="on" href="#"><i>◎</i>Overview</a><a href="#"><i>✓</i>Check a list</a><a href="#"><i>✉</i>Campaigns</a><a href="#"><i>→</i>Pipeline</a><a href="#"><i>@</i>Contacts</a><a href="#"><i>…</i>Staged</a></nav>
+<span class="me">Aditi · admin</span></div>
+<div class="next">Next: <b>3 follow-ups are overdue</b> · Stuti, Heet<span class="arrow">Go to pipeline →</span></div>
+<main>
+<div>
+  <div class="gate"><div class="big">9</div><p>Follow-ups due today<small>3 overdue · 6 due by end of day</small></p></div>
+  <div class="wk"><span>Contacted this week · Mon 2 – Sun 8 Nov</span><br><b>312</b> <span>of 500 · 188 to go · 4 days left</span><div class="prog"><i></i></div></div>
+  <div class="kpi"><span>Emails in hashmap</span><b>21,486</b></div>
+  <div class="kpi"><span>Staged, not merged</span><b>1,204</b></div>
+  <div class="kpi"><span>Reply rate, 30 days</span><b>3.8%</b></div>
+  <div class="kpi"><span>Meetings this week · in DD</span><b>6 · 3</b></div>
+</div>
+<section class="t">
+  <h2>Follow-ups due <span>Wed 4 Nov · synced 09:30 · sample data</span></h2>
+  <table>
+    <tr><th>Investor</th><th>Firm</th><th>Stage</th><th>Owner</th><th>Due</th></tr>
+    <tr><td><b>Vivek Rao</b></td><td>Saffron Growth Fund</td><td>1st follow-up pending</td><td>Stuti</td><td class="late">4 days late</td></tr>
+    <tr><td><b>Karan Bhatia</b></td><td>Northpeak Ventures</td><td>Data to be sent</td><td>Heet</td><td class="late">2 days late</td></tr>
+    <tr><td><b>Ritika Menon</b></td><td>Lumen Family Office</td><td>2nd meet scheduled</td><td>Saumya</td><td>Today 15:00</td></tr>
+    <tr><td><b>Neha Kulkarni</b></td><td>Arbor Angels</td><td>Waiting for reply</td><td>Hitansh</td><td>Today</td></tr>
+    <tr><td><b>Farah Siddiqui</b></td><td>Coastline Capital</td><td>Due diligence</td><td>AS</td><td>Today</td></tr>
+    <tr><td><b>Arjun Mehta</b></td><td>Banyan Seed Partners</td><td>Connected on WhatsApp</td><td>Aditi</td><td>Today</td></tr>
+  </table>
+  <div class="check"><div>Paste emails, drop a CSV or pick a sheet tab to check against the hashmap.</div><button>Check list →</button></div>
+</section>
+</main>
+</body></html>

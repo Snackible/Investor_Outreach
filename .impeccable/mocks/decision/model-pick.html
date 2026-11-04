@@ -1,0 +1,82 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:"Public Sans",sans-serif;color:#13213F;background:#fff;font-size:14px}
+.mono{font-family:"JetBrains Mono",monospace}
+header{background:#1F3A6E;color:#fff;display:flex;align-items:center;height:56px;padding:0 28px;gap:36px}
+header b{font-weight:800;font-size:17px}
+header nav{display:flex;gap:4px;height:100%}
+header nav a{color:#C9D5EA;text-decoration:none;padding:0 14px;display:flex;align-items:center;font-weight:600;font-size:14px}
+header nav a.on{color:#fff;box-shadow:inset 0 -4px 0 #fff}
+header .me{margin-left:auto;font-size:13px;color:#C9D5EA}
+.strip{background:#DCE4F0;border-bottom:2px solid #1F3A6E;padding:9px 28px;font-size:12.5px;display:flex;gap:28px}
+.strip b{font-weight:700}
+main{padding:22px 28px;display:grid;grid-template-columns:520px 1fr;gap:28px}
+h2{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;display:flex;justify-content:space-between}
+h2 span{font-weight:600;text-transform:none;letter-spacing:0;color:#4A5A7A}
+.berths{display:grid;grid-template-columns:repeat(25,1fr);gap:3px;padding:12px;border:1px solid #9FB1CF;background:repeating-linear-gradient(0deg,#fff 0 19px,#EEF2F8 19px 20px)}
+.berths i{height:14px;background:#1F3A6E}
+.berths i.w{background:#fff;border:1px solid #9FB1CF}
+.tot{display:flex;align-items:baseline;gap:12px;margin:14px 0 6px}
+.tot b{font-size:40px;font-weight:800}
+.tot span{color:#4A5A7A}
+.legend{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid #1F3A6E;margin-top:14px}
+.legend div{padding:10px 8px;border-right:1px solid #DCE4F0;font-size:12.5px}
+.legend div b{display:block;font-size:20px;font-weight:700}
+.code{display:inline-block;font-family:"JetBrains Mono",monospace;font-weight:700;font-size:12px;padding:2px 6px;border:1.5px solid currentColor}
+.cnf{color:#2E7D32}.wl{color:#B26A00}.can{color:#C0392B}.bnc{color:#6B4FA0}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#4A5A7A;padding:8px;border-bottom:2px solid #1F3A6E;background:#F3F6FB}
+td{padding:10px 8px;border-bottom:1px solid #DCE4F0}
+td.mono{font-size:13px}
+.late{color:#C0392B;font-weight:700}
+.check{margin-top:22px;border:1.5px dashed #1F3A6E;padding:16px;display:flex;gap:16px;align-items:center}
+.check p{flex:1;color:#4A5A7A}
+.check p b{display:block;color:#13213F}
+.check button{background:#1F3A6E;color:#fff;border:0;padding:12px 18px;font:700 14px "Public Sans"}
+.stamp{margin-top:16px;display:inline-block;border:2px solid #C0392B;color:#C0392B;padding:6px 10px;font:700 12px "JetBrains Mono";transform:rotate(-2deg)}
+</style></head><body>
+<header><b>Investor Hub</b>
+<nav><a class="on" href="#">Overview</a><a href="#">Check a list</a><a href="#">Campaigns</a><a href="#">Pipeline</a><a href="#">Contacts</a><a href="#">Staged</a></nav>
+<span class="me">Aditi · admin</span></header>
+<div class="strip mono"><span><b>CHART</b> WEEK 45</span><span>02-NOV-26 TO 08-NOV-26</span><span>PREPARED 04-NOV 09:30</span><span>SAMPLE DATA</span></div>
+<main>
+<section>
+  <h2>This week's chart <span>500 seats</span></h2>
+  <div class="berths">
+  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i>
+  <i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i>
+  <i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i>
+  </div>
+  <div class="tot"><b>312</b><span>of 500 confirmed · 188 seats open · 4 days left</span></div>
+  <div class="legend">
+    <div><span class="code cnf">CNF</span><b>19,903</b>contacted</div>
+    <div><span class="code wl">WL</span><b>1,204</b>staged</div>
+    <div><span class="code bnc">BNC</span><b>612</b>bounced</div>
+    <div><span class="code can">CAN</span><b>8,233</b>do not contact</div>
+  </div>
+  <div class="stamp">CHINMAY REVIEWED (7) · 28 BNC · 6.1%</div>
+</section>
+<section>
+  <h2>Follow-ups due <span>9 today · 3 overdue</span></h2>
+  <table>
+    <tr><th>S.No</th><th>Investor</th><th>Firm</th><th>Stage</th><th>Owner</th><th>Due</th></tr>
+    <tr><td class="mono">01</td><td><b>Vivek Rao</b></td><td>Saffron Growth Fund</td><td>1st follow-up pending</td><td>Stuti</td><td class="late mono">-4D</td></tr>
+    <tr><td class="mono">02</td><td><b>Karan Bhatia</b></td><td>Northpeak Ventures</td><td>Data to be sent</td><td>Heet</td><td class="late mono">-2D</td></tr>
+    <tr><td class="mono">03</td><td><b>Ritika Menon</b></td><td>Lumen Family Office</td><td>2nd meet scheduled</td><td>Saumya</td><td class="mono">TODAY</td></tr>
+    <tr><td class="mono">04</td><td><b>Neha Kulkarni</b></td><td>Arbor Angels</td><td>Waiting for reply</td><td>Hitansh</td><td class="mono">TODAY</td></tr>
+    <tr><td class="mono">05</td><td><b>Farah Siddiqui</b></td><td>Coastline Capital</td><td>Due diligence</td><td>AS</td><td class="mono">TODAY</td></tr>
+    <tr><td class="mono">06</td><td><b>Arjun Mehta</b></td><td>Banyan Seed Partners</td><td>Connected on WhatsApp</td><td>Aditi</td><td class="mono">TODAY</td></tr>
+  </table>
+  <div class="check"><p><b>Check a new list against the chart</b>Paste emails, drop a CSV or pick a sheet tab. New emails go on the waitlist (WL) until YAMM merges them.</p><button>Check list</button></div>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:Barlow,sans-serif;background:#1A1B1D;color:#EDEDED;display:grid;grid-template-columns:220px 1fr;font-size:14px}
+aside{background:#0E0F10;border-right:1px solid #2C2E31;padding:24px 0}
+aside b{display:block;padding:0 22px 20px;font:700 22px "Barlow Condensed";letter-spacing:.04em;text-transform:uppercase}
+aside a{display:block;padding:10px 22px;color:#8A8F96;text-decoration:none;font-weight:600}
+aside a.on{color:#fff;background:#232528;box-shadow:inset 3px 0 #F2A900}
+main{padding:24px 32px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.top h1{font:600 26px "Barlow Condensed";text-transform:uppercase;letter-spacing:.05em}
+.top span{color:#8A8F96;font-size:13px}
+.kpis{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:16px;margin-bottom:22px}
+.k{background:#232528;border:1px solid #2C2E31;padding:14px 16px}
+.k small{color:#8A8F96;text-transform:uppercase;font-size:12px;letter-spacing:.06em}
+.flaps{display:flex;gap:3px;margin-top:8px}
+.flaps i{font-style:normal;width:40px;height:54px;background:#111;color:#fff;font:700 40px/54px "Barlow Condensed";text-align:center;position:relative;border-radius:3px}
+.flaps i:after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:#000}
+.flaps.sm i{width:28px;height:40px;font-size:28px;line-height:40px}
+.k p{color:#8A8F96;font-size:13px;margin-top:8px}
+.board{background:#0E0F10;border:6px solid #3A3D41;padding:6px}
+.bh,.br{display:grid;grid-template-columns:60px 1.3fr 1.4fr 1.4fr 110px 140px;gap:6px;align-items:center}
+.bh{padding:8px 6px;color:#8A8F96;font:600 13px "Barlow Condensed";text-transform:uppercase;letter-spacing:.08em}
+.br{padding:6px;border-top:1px solid #222}
+.cell{background:#151617;font:600 19px "Barlow Condensed";text-transform:uppercase;letter-spacing:.06em;padding:7px 9px;color:#fff;white-space:nowrap;overflow:hidden}
+.lamp{width:12px;height:12px;border-radius:50%;background:#2A2C2E;margin:auto}
+.amber .lamp{background:#F2A900}
+.amber .due{color:#F2A900}
+.red .due{color:#E2574C}
+.red .lamp{background:#B3392F}
+.check{margin-top:20px;display:flex;gap:12px}
+.check div{flex:1;background:#232528;border:1px solid #2C2E31;padding:14px;color:#8A8F96}
+.check button{background:#F2A900;color:#111;border:0;padding:0 26px;font:700 18px "Barlow Condensed";text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<aside><b>Investor Hub</b><a class="on" href="#">Overview</a><a href="#">Check a list</a><a href="#">Campaigns</a><a href="#">Pipeline</a><a href="#">Contacts</a><a href="#">Staged</a></aside>
+<main>
+<div class="top"><h1>Departures · Wed 4 Nov</h1><span>Aditi · admin · synced 09:30 · sample data</span></div>
+<div class="kpis">
+  <div class="k"><small>Contacted this week · target 500</small><div class="flaps"><i>3</i><i>1</i><i>2</i><i style="color:#555">/</i><i>5</i><i>0</i><i>0</i></div><p>188 to go · 4 days left</p></div>
+  <div class="k"><small>Hashmap</small><div class="flaps sm"><i>2</i><i>1</i><i>4</i><i>8</i><i>6</i></div><p>1,204 staged</p></div>
+  <div class="k"><small>Reply rate 30d</small><div class="flaps sm"><i>3</i><i>.</i><i>8</i><i>%</i></div><p>Meetings this week: 6</p></div>
+  <div class="k"><small>In due diligence</small><div class="flaps sm"><i>0</i><i>3</i></div><p>Bounces blocked: 612</p></div>
+</div>
+<div class="board">
+  <div class="bh"><span></span><span>Investor</span><span>Firm</span><span>Stage</span><span>Owner</span><span>Due</span></div>
+  <div class="br red"><span class="lamp"></span><span class="cell">Vivek Rao</span><span class="cell">Saffron Growth</span><span class="cell">1st follow-up</span><span class="cell">Stuti</span><span class="cell due">Late 4D</span></div>
+  <div class="br red"><span class="lamp"></span><span class="cell">Karan Bhatia</span><span class="cell">Northpeak VC</span><span class="cell">Send data</span><span class="cell">Heet</span><span class="cell due">Late 2D</span></div>
+  <div class="br amber"><span class="lamp"></span><span class="cell">Ritika Menon</span><span class="cell">Lumen FO</span><span class="cell">2nd meet</span><span class="cell">Saumya</span><span class="cell due">Today 15:00</span></div>
+  <div class="br amber"><span class="lamp"></span><span class="cell">Neha Kulkarni</span><span class="cell">Arbor Angels</span><span class="cell">Awaiting reply</span><span class="cell">Hitansh</span><span class="cell due">Today</span></div>
+  <div class="br amber"><span class="lamp"></span><span class="cell">Farah Siddiqui</span><span class="cell">Coastline Cap</span><span class="cell">Due diligence</span><span class="cell">AS</span><span class="cell due">Today</span></div>
+  <div class="br"><span class="lamp"></span><span class="cell">Arjun Mehta</span><span class="cell">Banyan Seed</span><span class="cell">WhatsApp</span><span class="cell">Aditi</span><span class="cell due">Thu 5 Nov</span></div>
+</div>
+<div class="check"><div>Paste emails, drop a CSV or pick a sheet tab to check against the hashmap.</div><button>Check list</button></div>
+</main>
+</body></html>

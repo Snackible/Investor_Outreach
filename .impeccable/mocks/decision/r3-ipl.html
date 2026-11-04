@@ -1,0 +1,72 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;800&family=Saira:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:Saira,sans-serif;background:#F4F2F8;color:#1A1030;font-size:14px}
+header{background:#3B0A78;color:#fff;height:56px;display:flex;align-items:center;padding:0 28px;gap:30px}
+header b{font:800 20px "Saira Condensed";letter-spacing:.03em;text-transform:uppercase}
+header a{color:#D8C9F2;text-decoration:none;font-weight:600}
+header a.on{color:#fff;box-shadow:0 3px 0 #FFD100;padding-bottom:4px}
+header span{margin-left:auto;color:#D8C9F2}
+.bug{display:grid;grid-template-columns:auto 1fr auto auto auto;align-items:stretch;background:#1A1030;color:#fff;height:88px}
+.bug .t{background:#E6007E;padding:0 26px;display:flex;flex-direction:column;justify-content:center}
+.bug .t small{font-weight:600;font-size:13px}
+.bug .t b{font:800 46px/1 "Saira Condensed"}
+.bug .need{padding:0 26px;display:flex;align-items:center;font:700 26px "Saira Condensed";text-transform:uppercase;letter-spacing:.02em}
+.bug .need em{font-style:normal;color:#FFD100;margin:0 8px}
+.bug .s{padding:0 22px;border-left:1px solid #3A2E55;display:flex;flex-direction:column;justify-content:center}
+.bug .s small{color:#B8AECF;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.bug .s b{font:800 30px "Saira Condensed"}
+.cyan{color:#00B3E6}
+main{padding:22px 28px;display:grid;grid-template-columns:560px 1fr;gap:22px}
+.panel{background:#fff;padding:18px}
+h2{font:800 20px "Saira Condensed";text-transform:uppercase;letter-spacing:.03em;display:flex;justify-content:space-between;margin-bottom:10px}
+h2 span{font:400 13px Saira;text-transform:none;color:#5C5170}
+.score div{display:grid;grid-template-columns:110px 1fr 50px;align-items:center;gap:10px;padding:6px 0}
+.score i{display:block;height:16px;background:#3B0A78}
+.score b{text-align:right;font:800 20px "Saira Condensed"}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:12px;color:#5C5170;text-transform:uppercase;letter-spacing:.05em;padding:8px 8px 8px 0;border-bottom:2px solid #3B0A78}
+td{padding:10px 8px 10px 0;border-bottom:1px solid #ECE8F3}
+.late{color:#C8006D;font-weight:600}
+.check{margin-top:14px;display:flex;background:#FFD100}
+.check div{flex:1;padding:14px}
+.check button{background:#1A1030;color:#FFD100;border:0;padding:0 22px;font:800 17px "Saira Condensed";text-transform:uppercase}
+</style></head><body>
+<header><b>Investor Hub</b><a class="on" href="#">Overview</a><a href="#">Check a list</a><a href="#">Campaigns</a><a href="#">Pipeline</a><a href="#">Contacts</a><a href="#">Staged</a><span>Aditi · synced 09:30 · sample data</span></header>
+<div class="bug">
+  <div class="t"><small>Week 45 · contacted</small><b>312/500</b></div>
+  <div class="need">Need <em>188</em> from 4 days</div>
+  <div class="s"><small>Current rate</small><b>104/day</b></div>
+  <div class="s"><small>Required rate</small><b class="cyan">47/day</b></div>
+  <div class="s"><small>Replies · 30d</small><b>3.8%</b></div>
+</div>
+<main>
+<div>
+  <div class="panel"><h2>The week so far <span>cumulative contacted vs target</span>
+  </h2>
+  <svg width="100%" height="220" viewBox="0 0 520 220"><line x1="0" y1="20" x2="520" y2="20" stroke="#C9C1DA" stroke-dasharray="5 5"/><text x="4" y="14" font-size="11" fill="#5C5170">500 target</text><line x1="0" y1="210" x2="520" y2="20" stroke="#C9C1DA"/><polyline points="0,210 74,172 148,128 222,91" fill="none" stroke="#E6007E" stroke-width="5"/><circle cx="222" cy="91" r="7" fill="#E6007E"/><polyline points="222,91 296,74 370,56 444,38 518,20" fill="none" stroke="#00B3E6" stroke-width="3" stroke-dasharray="6 6"/><g font-size="11" fill="#5C5170"><text x="0" y="218">Mon</text><text x="70" y="218">Tue</text><text x="144" y="218">Wed</text><text x="218" y="218">Thu</text><text x="292" y="218">Fri</text><text x="366" y="218">Sat</text><text x="440" y="218">Sun</text></g></svg></div>
+  <div class="panel score" style="margin-top:16px"><h2>Team scorecard <span>contacted this week</span></h2>
+    <div><span>Chinmay</span><i style="width:92%"></i><b>96</b></div>
+    <div><span>Stuti</span><i style="width:80%;background:#E6007E"></i><b>84</b></div>
+    <div><span>Heet</span><i style="width:68%;background:#00B3E6"></i><b>71</b></div>
+    <div><span>Saumya</span><i style="width:58%;background:#FFD100"></i><b>61</b></div>
+  </div>
+</div>
+<div class="panel">
+  <h2>Follow-ups due <span>9 today · 3 overdue</span></h2>
+  <table>
+    <tr><th>Investor</th><th>Firm</th><th>Stage</th><th>Owner</th><th>Due</th></tr>
+    <tr><td><b>Vivek Rao</b></td><td>Saffron Growth Fund</td><td>1st follow-up pending</td><td>Stuti</td><td class="late">4 days late</td></tr>
+    <tr><td><b>Karan Bhatia</b></td><td>Northpeak Ventures</td><td>Data to be sent</td><td>Heet</td><td class="late">2 days late</td></tr>
+    <tr><td><b>Ritika Menon</b></td><td>Lumen Family Office</td><td>2nd meet scheduled</td><td>Saumya</td><td>Today 15:00</td></tr>
+    <tr><td><b>Neha Kulkarni</b></td><td>Arbor Angels</td><td>Waiting for reply</td><td>Hitansh</td><td>Today</td></tr>
+    <tr><td><b>Farah Siddiqui</b></td><td>Coastline Capital</td><td>Due diligence</td><td>AS</td><td>Today</td></tr>
+    <tr><td><b>Arjun Mehta</b></td><td>Banyan Seed Partners</td><td>Connected on WhatsApp</td><td>Aditi</td><td>Today</td></tr>
+  </table>
+  <div class="check"><div>Paste emails, drop a CSV or pick a sheet tab to check against the hashmap.</div><button>Check list</button></div>
+</div>
+</main>
+</body></html>

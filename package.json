@@ -1,0 +1,25 @@
+{
+  "name": "investor-hub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "check-sheets": "node scripts/check-sheets.mjs"
+  },
+  "dependencies": {
+    "google-auth-library": "9.15.1",
+    "mongodb": "6.16.0",
+    "next": "15.5.29",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.21",
+    "@types/react": "19.1.5",
+    "@types/react-dom": "19.1.5",
+    "typescript": "5.8.3"
+  }
+}

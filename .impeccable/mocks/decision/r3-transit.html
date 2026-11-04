@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:"Red Hat Text",sans-serif;background:#0B1B3F;color:#F4F6FA;font-size:14px;display:grid;grid-template-columns:220px 1fr}
+aside{padding:24px 0;border-right:1px solid #22345E}
+aside b{display:block;padding:0 22px 22px;font:900 19px "Red Hat Display"}
+aside a{display:flex;align-items:center;gap:12px;padding:11px 22px;color:#AFC0E6;text-decoration:none;font-weight:500}
+aside a i{width:12px;height:12px;border-radius:50%;border:3px solid currentColor}
+aside a.on{color:#fff;background:#132A5C}
+main{padding:24px 28px;display:grid;grid-template-columns:1fr 470px;gap:24px}
+.top{grid-column:1/-1;display:flex;justify-content:space-between;align-items:baseline}
+.top h1{font:900 28px "Red Hat Display"}
+.top span{color:#AFC0E6}
+.kp{display:flex;gap:28px;margin-bottom:12px}
+.kp div small{display:block;color:#AFC0E6;font-size:13px}
+.kp div b{font:900 34px "Red Hat Display"}
+.map{position:relative}
+svg text{font-family:"Red Hat Text";fill:#F4F6FA}
+.panel{background:#F4F6FA;color:#0B1B3F;padding:18px}
+.panel h2{font:900 20px "Red Hat Display";display:flex;justify-content:space-between;margin-bottom:8px}
+.panel h2 span{font:400 13px "Red Hat Text";color:#4C5A7A}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:12px;color:#4C5A7A;padding:8px 6px 8px 0;border-bottom:2px solid #0B1B3F}
+td{padding:9px 6px 9px 0;border-bottom:1px solid #DDE3EE;font-size:14px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.late{color:#C21F38;font-weight:700}
+.check{margin-top:14px;display:flex;border:2px solid #0B1B3F}
+.check div{flex:1;padding:12px;font-size:13.5px}
+.check button{background:#0B1B3F;color:#fff;border:0;padding:0 18px;font:700 14px "Red Hat Text"}
+</style></head><body>
+<aside><b>Investor Hub</b><a class="on" href="#"><i style="color:#FFB000"></i>Overview</a><a href="#"><i style="color:#14B86A"></i>Check a list</a><a href="#"><i style="color:#2F6BFF"></i>Campaigns</a><a href="#"><i style="color:#E8384F"></i>Pipeline</a><a href="#"><i style="color:#AFC0E6"></i>Contacts</a><a href="#"><i style="color:#AFC0E6"></i>Staged</a></aside>
+<main>
+<div class="top"><h1>Overview</h1><span>Aditi · synced 09:30 · sample data</span></div>
+<section class="map">
+  <div class="kp"><div><small>Contacted this week</small><b>312 / 500</b></div><div><small>Hashmap</small><b>21,486</b></div><div><small>Reply rate 30d</small><b>3.8%</b></div></div>
+  <svg width="100%" height="560" viewBox="0 0 760 560">
+    <path d="M30 80 H300 L380 160 H730" stroke="#2F6BFF" stroke-width="12" fill="none"/>
+    <path d="M30 300 H220 L300 220 L380 160 L460 240 V420 H730" stroke="#E8384F" stroke-width="12" fill="none"/>
+    <path d="M30 470 H300 L460 330 V240" stroke="#14B86A" stroke-width="12" fill="none"/>
+    <path d="M620 160 V470 H730" stroke="#FFB000" stroke-width="12" fill="none"/>
+    <g fill="#fff" stroke="#0B1B3F" stroke-width="4"><circle cx="30" cy="80" r="11"/><circle cx="30" cy="300" r="11"/><circle cx="30" cy="470" r="11"/><circle cx="380" cy="160" r="20"/><circle cx="460" cy="240" r="20"/><circle cx="460" cy="420" r="11"/><circle cx="620" cy="160" r="16"/><circle cx="730" cy="420" r="11"/><circle cx="730" cy="470" r="11"/><circle cx="730" cy="160" r="11"/></g>
+    <text x="30" y="58" font-size="14">Emailed · Stuti</text><text x="30" y="278" font-size="14">Emailed · Heet</text><text x="30" y="448" font-size="14">LinkedIn · Saumya</text>
+    <text x="320" y="125" font-size="15" font-weight="700">Replied · 30</text>
+    <text x="480" y="232" font-size="15" font-weight="700">Meeting · 6</text>
+    <text x="478" y="412" font-size="14">Data sent · 4</text>
+    <text x="580" y="140" font-size="15" font-weight="700">Due diligence · 3</text>
+    <text x="640" y="400" font-size="14">Converted · 1</text>
+    <text x="640" y="500" font-size="14">Not interested · 41</text>
+    <text x="690" y="190" font-size="13" fill="#AFC0E6">Inactive</text>
+  </svg>
+</section>
+<section class="panel">
+  <h2>Follow-ups due <span>9 today · 3 overdue</span></h2>
+  <table>
+    <tr><th>Investor</th><th>Stage</th><th>Owner</th><th>Due</th></tr>
+    <tr><td><b>Vivek Rao</b><br>Saffron Growth Fund</td><td><span class="dot" style="background:#2F6BFF"></span>1st follow-up</td><td>Stuti</td><td class="late">4d late</td></tr>
+    <tr><td><b>Karan Bhatia</b><br>Northpeak Ventures</td><td><span class="dot" style="background:#E8384F"></span>Data to send</td><td>Heet</td><td class="late">2d late</td></tr>
+    <tr><td><b>Ritika Menon</b><br>Lumen Family Office</td><td><span class="dot" style="background:#E8384F"></span>2nd meet</td><td>Saumya</td><td>Today</td></tr>
+    <tr><td><b>Neha Kulkarni</b><br>Arbor Angels</td><td><span class="dot" style="background:#14B86A"></span>Awaiting reply</td><td>Hitansh</td><td>Today</td></tr>
+    <tr><td><b>Farah Siddiqui</b><br>Coastline Capital</td><td><span class="dot" style="background:#FFB000"></span>Due diligence</td><td>AS</td><td>Today</td></tr>
+  </table>
+  <div class="check"><div>Paste emails, drop a CSV or pick a sheet tab.</div><button>Check list</button></div>
+</section>
+</main>
+</body></html>

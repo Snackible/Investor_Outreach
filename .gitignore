@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.env*.local
+.env
+*.pem
+# service-account keys and Atlas credentials must never be committed
+*credentials*.env
+*-key.json
+.impeccable/review/

@@ -1,0 +1,780 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-04T07:47:04.046Z",
+  "title": "Design System: Investor Hub",
+  "extensions": {
+    "colorMeta": {
+      "shell": {
+        "role": "primary",
+        "displayName": "Broadcast Purple",
+        "canonical": "oklch(31.4% 0.162 294.5)",
+        "tonalRamp": [
+          "oklch(15% 0.162 294.5)",
+          "oklch(25% 0.162 294.5)",
+          "oklch(35% 0.162 294.5)",
+          "oklch(45% 0.162 294.5)",
+          "oklch(55% 0.162 294.5)",
+          "oklch(68% 0.162 294.5)",
+          "oklch(82% 0.162 294.5)",
+          "oklch(95% 0.040 294.5)"
+        ]
+      },
+      "shell-ink": {
+        "role": "primary",
+        "displayName": "Shell Ink",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(25% 0.000 89.9)",
+          "oklch(35% 0.000 89.9)",
+          "oklch(45% 0.000 89.9)",
+          "oklch(55% 0.000 89.9)",
+          "oklch(68% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "shell-muted": {
+        "role": "primary",
+        "displayName": "Shell Muted",
+        "canonical": "oklch(86.1% 0.058 301.9)",
+        "tonalRamp": [
+          "oklch(15% 0.058 301.9)",
+          "oklch(25% 0.058 301.9)",
+          "oklch(35% 0.058 301.9)",
+          "oklch(45% 0.058 301.9)",
+          "oklch(55% 0.058 301.9)",
+          "oklch(68% 0.058 301.9)",
+          "oklch(82% 0.058 301.9)",
+          "oklch(95% 0.040 301.9)"
+        ]
+      },
+      "bat": {
+        "role": "primary",
+        "displayName": "Batting Magenta",
+        "canonical": "oklch(60.0% 0.244 358.6)",
+        "tonalRamp": [
+          "oklch(15% 0.200 358.6)",
+          "oklch(25% 0.200 358.6)",
+          "oklch(35% 0.200 358.6)",
+          "oklch(45% 0.200 358.6)",
+          "oklch(55% 0.200 358.6)",
+          "oklch(68% 0.200 358.6)",
+          "oklch(82% 0.200 358.6)",
+          "oklch(95% 0.040 358.6)"
+        ]
+      },
+      "bat-ink": {
+        "role": "primary",
+        "displayName": "Bat Ink",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(25% 0.000 89.9)",
+          "oklch(35% 0.000 89.9)",
+          "oklch(45% 0.000 89.9)",
+          "oklch(55% 0.000 89.9)",
+          "oklch(68% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "proj": {
+        "role": "secondary",
+        "displayName": "Projection Cyan",
+        "canonical": "oklch(71.5% 0.139 227.3)",
+        "tonalRamp": [
+          "oklch(15% 0.139 227.3)",
+          "oklch(25% 0.139 227.3)",
+          "oklch(35% 0.139 227.3)",
+          "oklch(45% 0.139 227.3)",
+          "oklch(55% 0.139 227.3)",
+          "oklch(68% 0.139 227.3)",
+          "oklch(82% 0.139 227.3)",
+          "oklch(95% 0.040 227.3)"
+        ]
+      },
+      "action": {
+        "role": "tertiary",
+        "displayName": "Action Yellow",
+        "canonical": "oklch(87.5% 0.179 92.7)",
+        "tonalRamp": [
+          "oklch(15% 0.179 92.7)",
+          "oklch(25% 0.179 92.7)",
+          "oklch(35% 0.179 92.7)",
+          "oklch(45% 0.179 92.7)",
+          "oklch(55% 0.179 92.7)",
+          "oklch(68% 0.179 92.7)",
+          "oklch(82% 0.179 92.7)",
+          "oklch(95% 0.040 92.7)"
+        ]
+      },
+      "action-ink": {
+        "role": "tertiary",
+        "displayName": "Action Ink",
+        "canonical": "oklch(20.6% 0.061 294.9)",
+        "tonalRamp": [
+          "oklch(15% 0.061 294.9)",
+          "oklch(25% 0.061 294.9)",
+          "oklch(35% 0.061 294.9)",
+          "oklch(45% 0.061 294.9)",
+          "oklch(55% 0.061 294.9)",
+          "oklch(68% 0.061 294.9)",
+          "oklch(82% 0.061 294.9)",
+          "oklch(95% 0.040 294.9)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Lavender Ground",
+        "canonical": "oklch(96.4% 0.008 301.4)",
+        "tonalRamp": [
+          "oklch(15% 0.008 301.4)",
+          "oklch(25% 0.008 301.4)",
+          "oklch(35% 0.008 301.4)",
+          "oklch(45% 0.008 301.4)",
+          "oklch(55% 0.008 301.4)",
+          "oklch(68% 0.008 301.4)",
+          "oklch(82% 0.008 301.4)",
+          "oklch(95% 0.008 301.4)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel White",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(25% 0.000 89.9)",
+          "oklch(35% 0.000 89.9)",
+          "oklch(45% 0.000 89.9)",
+          "oklch(55% 0.000 89.9)",
+          "oklch(68% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Scoreboard Ink",
+        "canonical": "oklch(20.6% 0.061 294.9)",
+        "tonalRamp": [
+          "oklch(15% 0.061 294.9)",
+          "oklch(25% 0.061 294.9)",
+          "oklch(35% 0.061 294.9)",
+          "oklch(45% 0.061 294.9)",
+          "oklch(55% 0.061 294.9)",
+          "oklch(68% 0.061 294.9)",
+          "oklch(82% 0.061 294.9)",
+          "oklch(95% 0.040 294.9)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Dusk Muted",
+        "canonical": "oklch(45.8% 0.051 300.7)",
+        "tonalRamp": [
+          "oklch(15% 0.051 300.7)",
+          "oklch(25% 0.051 300.7)",
+          "oklch(35% 0.051 300.7)",
+          "oklch(45% 0.051 300.7)",
+          "oklch(55% 0.051 300.7)",
+          "oklch(68% 0.051 300.7)",
+          "oklch(82% 0.051 300.7)",
+          "oklch(95% 0.040 300.7)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline Lilac",
+        "canonical": "oklch(93.7% 0.015 302.5)",
+        "tonalRamp": [
+          "oklch(15% 0.015 302.5)",
+          "oklch(25% 0.015 302.5)",
+          "oklch(35% 0.015 302.5)",
+          "oklch(45% 0.015 302.5)",
+          "oklch(55% 0.015 302.5)",
+          "oklch(68% 0.015 302.5)",
+          "oklch(82% 0.015 302.5)",
+          "oklch(95% 0.015 302.5)"
+        ]
+      },
+      "field-rule": {
+        "role": "neutral",
+        "displayName": "Field Lilac",
+        "canonical": "oklch(84.3% 0.033 301.5)",
+        "tonalRamp": [
+          "oklch(15% 0.033 301.5)",
+          "oklch(25% 0.033 301.5)",
+          "oklch(35% 0.033 301.5)",
+          "oklch(45% 0.033 301.5)",
+          "oklch(55% 0.033 301.5)",
+          "oklch(68% 0.033 301.5)",
+          "oklch(82% 0.033 301.5)",
+          "oklch(95% 0.033 301.5)"
+        ]
+      },
+      "chip": {
+        "role": "neutral",
+        "displayName": "Chip Lilac",
+        "canonical": "oklch(95.2% 0.015 302.6)",
+        "tonalRamp": [
+          "oklch(15% 0.015 302.6)",
+          "oklch(25% 0.015 302.6)",
+          "oklch(35% 0.015 302.6)",
+          "oklch(45% 0.015 302.6)",
+          "oklch(55% 0.015 302.6)",
+          "oklch(68% 0.015 302.6)",
+          "oklch(82% 0.015 302.6)",
+          "oklch(95% 0.015 302.6)"
+        ]
+      },
+      "target": {
+        "role": "neutral",
+        "displayName": "Target Grey",
+        "canonical": "oklch(82.5% 0.036 300.2)",
+        "tonalRamp": [
+          "oklch(15% 0.036 300.2)",
+          "oklch(25% 0.036 300.2)",
+          "oklch(35% 0.036 300.2)",
+          "oklch(45% 0.036 300.2)",
+          "oklch(55% 0.036 300.2)",
+          "oklch(68% 0.036 300.2)",
+          "oklch(82% 0.036 300.2)",
+          "oklch(95% 0.036 300.2)"
+        ]
+      },
+      "bug": {
+        "role": "neutral",
+        "displayName": "Scoreboard Ink (bug)",
+        "canonical": "oklch(20.6% 0.061 294.9)",
+        "tonalRamp": [
+          "oklch(15% 0.061 294.9)",
+          "oklch(25% 0.061 294.9)",
+          "oklch(35% 0.061 294.9)",
+          "oklch(45% 0.061 294.9)",
+          "oklch(55% 0.061 294.9)",
+          "oklch(68% 0.061 294.9)",
+          "oklch(82% 0.061 294.9)",
+          "oklch(95% 0.040 294.9)"
+        ]
+      },
+      "bug-muted": {
+        "role": "neutral",
+        "displayName": "Bug Muted",
+        "canonical": "oklch(77.0% 0.048 299.1)",
+        "tonalRamp": [
+          "oklch(15% 0.048 299.1)",
+          "oklch(25% 0.048 299.1)",
+          "oklch(35% 0.048 299.1)",
+          "oklch(45% 0.048 299.1)",
+          "oklch(55% 0.048 299.1)",
+          "oklch(68% 0.048 299.1)",
+          "oklch(82% 0.048 299.1)",
+          "oklch(95% 0.040 299.1)"
+        ]
+      },
+      "bug-rule": {
+        "role": "neutral",
+        "displayName": "Bug Rule",
+        "canonical": "oklch(33.4% 0.068 296.7)",
+        "tonalRamp": [
+          "oklch(15% 0.068 296.7)",
+          "oklch(25% 0.068 296.7)",
+          "oklch(35% 0.068 296.7)",
+          "oklch(45% 0.068 296.7)",
+          "oklch(55% 0.068 296.7)",
+          "oklch(68% 0.068 296.7)",
+          "oklch(82% 0.068 296.7)",
+          "oklch(95% 0.040 296.7)"
+        ]
+      },
+      "bug-behind": {
+        "role": "status",
+        "displayName": "Behind Pink",
+        "canonical": "oklch(73.4% 0.186 355.3)",
+        "tonalRamp": [
+          "oklch(15% 0.186 355.3)",
+          "oklch(25% 0.186 355.3)",
+          "oklch(35% 0.186 355.3)",
+          "oklch(45% 0.186 355.3)",
+          "oklch(55% 0.186 355.3)",
+          "oklch(68% 0.186 355.3)",
+          "oklch(82% 0.186 355.3)",
+          "oklch(95% 0.040 355.3)"
+        ]
+      },
+      "late": {
+        "role": "status",
+        "displayName": "Late Crimson",
+        "canonical": "oklch(49.8% 0.201 0.9)",
+        "tonalRamp": [
+          "oklch(15% 0.200 0.9)",
+          "oklch(25% 0.200 0.9)",
+          "oklch(35% 0.200 0.9)",
+          "oklch(45% 0.200 0.9)",
+          "oklch(55% 0.200 0.9)",
+          "oklch(68% 0.200 0.9)",
+          "oklch(82% 0.200 0.9)",
+          "oklch(95% 0.040 0.9)"
+        ]
+      },
+      "ok": {
+        "role": "status",
+        "displayName": "Pitch Green",
+        "canonical": "oklch(51.3% 0.113 159.5)",
+        "tonalRamp": [
+          "oklch(15% 0.113 159.5)",
+          "oklch(25% 0.113 159.5)",
+          "oklch(35% 0.113 159.5)",
+          "oklch(45% 0.113 159.5)",
+          "oklch(55% 0.113 159.5)",
+          "oklch(68% 0.113 159.5)",
+          "oklch(82% 0.113 159.5)",
+          "oklch(95% 0.040 159.5)"
+        ]
+      },
+      "warn": {
+        "role": "status",
+        "displayName": "Amber Warn",
+        "canonical": "oklch(53.1% 0.119 65.1)",
+        "tonalRamp": [
+          "oklch(15% 0.119 65.1)",
+          "oklch(25% 0.119 65.1)",
+          "oklch(35% 0.119 65.1)",
+          "oklch(45% 0.119 65.1)",
+          "oklch(55% 0.119 65.1)",
+          "oklch(68% 0.119 65.1)",
+          "oklch(82% 0.119 65.1)",
+          "oklch(95% 0.040 65.1)"
+        ]
+      },
+      "ground-dark": {
+        "role": "neutral",
+        "displayName": "Night Ground",
+        "canonical": "oklch(15.8% 0.030 296.0)",
+        "tonalRamp": [
+          "oklch(15% 0.030 296.0)",
+          "oklch(25% 0.030 296.0)",
+          "oklch(35% 0.030 296.0)",
+          "oklch(45% 0.030 296.0)",
+          "oklch(55% 0.030 296.0)",
+          "oklch(68% 0.030 296.0)",
+          "oklch(82% 0.030 296.0)",
+          "oklch(95% 0.030 296.0)"
+        ]
+      },
+      "panel-dark": {
+        "role": "neutral",
+        "displayName": "Night Panel",
+        "canonical": "oklch(20.1% 0.042 295.6)",
+        "tonalRamp": [
+          "oklch(15% 0.042 295.6)",
+          "oklch(25% 0.042 295.6)",
+          "oklch(35% 0.042 295.6)",
+          "oklch(45% 0.042 295.6)",
+          "oklch(55% 0.042 295.6)",
+          "oklch(68% 0.042 295.6)",
+          "oklch(82% 0.042 295.6)",
+          "oklch(95% 0.040 295.6)"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "oklch(94.4% 0.024 302.0)",
+        "tonalRamp": [
+          "oklch(15% 0.024 302.0)",
+          "oklch(25% 0.024 302.0)",
+          "oklch(35% 0.024 302.0)",
+          "oklch(45% 0.024 302.0)",
+          "oklch(55% 0.024 302.0)",
+          "oklch(68% 0.024 302.0)",
+          "oklch(82% 0.024 302.0)",
+          "oklch(95% 0.024 302.0)"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "Night Muted",
+        "canonical": "oklch(71.8% 0.059 299.8)",
+        "tonalRamp": [
+          "oklch(15% 0.059 299.8)",
+          "oklch(25% 0.059 299.8)",
+          "oklch(35% 0.059 299.8)",
+          "oklch(45% 0.059 299.8)",
+          "oklch(55% 0.059 299.8)",
+          "oklch(68% 0.059 299.8)",
+          "oklch(82% 0.059 299.8)",
+          "oklch(95% 0.040 299.8)"
+        ]
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "canonical": "oklch(27.4% 0.057 295.8)",
+        "tonalRamp": [
+          "oklch(15% 0.057 295.8)",
+          "oklch(25% 0.057 295.8)",
+          "oklch(35% 0.057 295.8)",
+          "oklch(45% 0.057 295.8)",
+          "oklch(55% 0.057 295.8)",
+          "oklch(68% 0.057 295.8)",
+          "oklch(82% 0.057 295.8)",
+          "oklch(95% 0.040 295.8)"
+        ]
+      },
+      "bug-dark": {
+        "role": "neutral",
+        "displayName": "Night Bug",
+        "canonical": "oklch(24.9% 0.063 295.0)",
+        "tonalRamp": [
+          "oklch(15% 0.063 295.0)",
+          "oklch(25% 0.063 295.0)",
+          "oklch(35% 0.063 295.0)",
+          "oklch(45% 0.063 295.0)",
+          "oklch(55% 0.063 295.0)",
+          "oklch(68% 0.063 295.0)",
+          "oklch(82% 0.063 295.0)",
+          "oklch(95% 0.040 295.0)"
+        ]
+      },
+      "ok-dark": {
+        "role": "status",
+        "displayName": "Night Pitch Green",
+        "canonical": "oklch(79.7% 0.164 159.7)",
+        "tonalRamp": [
+          "oklch(15% 0.164 159.7)",
+          "oklch(25% 0.164 159.7)",
+          "oklch(35% 0.164 159.7)",
+          "oklch(45% 0.164 159.7)",
+          "oklch(55% 0.164 159.7)",
+          "oklch(68% 0.164 159.7)",
+          "oklch(82% 0.164 159.7)",
+          "oklch(95% 0.040 159.7)"
+        ]
+      },
+      "warn-dark": {
+        "role": "status",
+        "displayName": "Night Amber",
+        "canonical": "oklch(82.4% 0.149 73.3)",
+        "tonalRamp": [
+          "oklch(15% 0.149 73.3)",
+          "oklch(25% 0.149 73.3)",
+          "oklch(35% 0.149 73.3)",
+          "oklch(45% 0.149 73.3)",
+          "oklch(55% 0.149 73.3)",
+          "oklch(68% 0.149 73.3)",
+          "oklch(82% 0.149 73.3)",
+          "oklch(95% 0.040 73.3)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "score": {
+        "displayName": "Score",
+        "purpose": "Contacted/target figure in the bug's batting block; 34px on phones."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page titles, uppercase; 26px on phones."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Panel titles, brand mark, bar figures; uppercase."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "All buttons, uppercase condensed."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text with tabular numerals; copy capped at 70ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Table heads and bug/tally stat labels, uppercase."
+      }
+    },
+    "shadows": [
+      {
+        "name": "popover",
+        "value": "0 12px 32px rgba(10, 4, 30, 0.28)",
+        "purpose": "Theme menu panel only; the one floating layer."
+      },
+      {
+        "name": "nav-active",
+        "value": "inset 0 -3px 0 var(--action)",
+        "purpose": "Current-page underline in the shell bar; a rule, not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "roll",
+        "value": "900ms, 1 - 2^(-10t) ease-out via requestAnimationFrame",
+        "purpose": "Score bug figures roll from old to new value after a sync; snaps under reduced motion."
+      },
+      {
+        "name": "nav",
+        "value": "color 0.15s ease, box-shadow 0.2s ease",
+        "purpose": "Shell nav hover and active underline."
+      },
+      {
+        "name": "button",
+        "value": "filter 0.15s ease, transform 0.1s ease",
+        "purpose": "Button brightness on hover, 1px press on active."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition: none; animation: none",
+        "purpose": "Global kill switch under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "1100px"
+      },
+      {
+        "name": "phone",
+        "value": "720px"
+      }
+    ],
+    "focus": {
+      "value": "outline: 3px solid var(--action); outline-offset: 2px",
+      "purpose": "Global focus-visible ring."
+    },
+    "themes": {
+      "note": "Kit via data-theme on <html> (cookie hub_theme, default purple). Mode via data-mode = system | light | dark (cookie hub_mode, default system). Values override the purple light defaults.",
+      "purple": {
+        "shell": "#3b0a78",
+        "shell-muted": "#d8c9f2",
+        "bat": "#e6007e",
+        "bat-ink": "#ffffff",
+        "proj": "#00b3e6",
+        "action": "#ffd100",
+        "action-ink": "#1a1030"
+      },
+      "blue": {
+        "shell": "#0b3b8c",
+        "shell-muted": "#c9d8f5",
+        "bat": "#f26522",
+        "bat-ink": "#1a1030",
+        "proj": "#2ec4b6",
+        "action": "#ffc72c",
+        "action-ink": "#0f1a33",
+        "ground": "#f2f4f9",
+        "chip": "#edf1f9",
+        "target": "#c3cfe6",
+        "dark": {
+          "rule-strong": "#2f5aa8",
+          "target": "#34466b",
+          "ground": "#0a0f1c",
+          "panel": "#121a2c",
+          "bug": "#1a2742",
+          "chip": "#1b2640",
+          "rule": "#212d47",
+          "field": "#0c1322"
+        }
+      },
+      "green": {
+        "shell": "#0b5d3b",
+        "shell-muted": "#c3e6d4",
+        "bat": "#e0245e",
+        "bat-ink": "#ffffff",
+        "proj": "#3fb6ff",
+        "action": "#f5e663",
+        "action-ink": "#0f241a",
+        "ground": "#f1f6f3",
+        "chip": "#ecf5f0",
+        "target": "#c4dccf",
+        "dark": {
+          "rule-strong": "#22704f",
+          "target": "#2f5442",
+          "ground": "#08130e",
+          "panel": "#101e17",
+          "bug": "#183428",
+          "chip": "#17291f",
+          "rule": "#1d3328",
+          "field": "#0b1711"
+        }
+      },
+      "red": {
+        "shell": "#8e0e25",
+        "shell-muted": "#f2c9d0",
+        "bat": "#ff8a00",
+        "bat-ink": "#1a1030",
+        "proj": "#3da5ff",
+        "action": "#ffd100",
+        "action-ink": "#1f0a0e",
+        "ground": "#f8f2f3",
+        "chip": "#f8eef0",
+        "target": "#e6c6cc",
+        "dark": {
+          "rule-strong": "#8e2a3b",
+          "target": "#5c3540",
+          "ground": "#150a0d",
+          "panel": "#211216",
+          "bug": "#3a1b23",
+          "chip": "#2d171c",
+          "rule": "#33202a",
+          "field": "#190d10"
+        }
+      },
+      "darkMode": {
+        "ground": "#0e0a18",
+        "panel": "#181227",
+        "ink": "#efe9fa",
+        "muted": "#a99cc4",
+        "rule": "#2a2140",
+        "rule-strong": "#4d3b78",
+        "bug": "#241a3c",
+        "bug-rule": "#3a2e55",
+        "late": "#ff6fae",
+        "ok": "#3ddc97",
+        "warn": "#ffb547",
+        "target": "#4a3d66",
+        "field": "#120d1e",
+        "field-rule": "#3a2e55",
+        "chip": "#241b38"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Action Button",
+      "kind": "button",
+      "refersTo": "button-action",
+      "description": "The one primary action per view.",
+      "html": "<button class=\"ds-btn ds-btn-action\">Stage 2 new</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 18px;border:0;border-radius:0;cursor:pointer;font-family:var(--font-display,'Saira Condensed',sans-serif);font-weight:800;font-size:16px;letter-spacing:0.04em;text-transform:uppercase;transition:filter .15s ease,transform .1s ease}.ds-btn:hover{filter:brightness(1.06)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible{outline:3px solid var(--action,#ffd100);outline-offset:2px}.ds-btn-action{background:var(--action,#ffd100);color:var(--action-ink,#1a1030)}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary actions: Sync now, Copy, Download.",
+      "html": "<button class=\"ds-btn-line\">Sync now</button>",
+      "css": ".ds-btn-line{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 18px;border-radius:0;cursor:pointer;font-family:var(--font-display,'Saira Condensed',sans-serif);font-weight:800;font-size:16px;letter-spacing:0.04em;text-transform:uppercase;background:transparent;color:var(--ink,#1a1030);border:1px solid var(--field-rule,#cfc7de);transition:filter .15s ease,transform .1s ease}.ds-btn-line:hover{filter:brightness(1.06)}.ds-btn-line:active{transform:translateY(1px)}.ds-btn-line:focus-visible{outline:3px solid var(--action,#ffd100);outline-offset:2px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled field with 2px radius and yellow focus ring.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-q\">Google Sheet link</label><input id=\"ds-q\" placeholder=\"https://docs.google.com/spreadsheets/d/…\"></div>",
+      "css": ".ds-field{display:grid;gap:6px;font-family:var(--font-body,Saira,sans-serif);font-size:14px;color:var(--ink,#1a1030)}.ds-field label{font-weight:600;font-size:13px}.ds-field input{background:var(--field,#fff);border:1px solid var(--field-rule,#cfc7de);border-radius:2px;padding:9px 11px;min-height:40px;font:inherit;color:inherit}.ds-field input::placeholder{color:var(--muted,#5c5170)}.ds-field input:focus-visible{outline:3px solid var(--action,#ffd100);outline-offset:2px}"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Source and result filters; selected fills with the shell colour.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Paste</button><button class=\"ds-chip\" aria-pressed=\"false\">New <b>4</b></button></div>",
+      "css": ".ds-chips{display:flex;gap:10px}.ds-chip{background:var(--chip,#f1edf8);color:var(--ink,#1a1030);border:1px solid transparent;border-radius:0;padding:5px 11px;cursor:pointer;font-family:var(--font-body,Saira,sans-serif);font-weight:600;font-size:13px}.ds-chip b{font-weight:800;margin-left:4px}.ds-chip[aria-pressed=true]{background:var(--shell,#3b0a78);color:var(--shell-ink,#fff)}.ds-chip:focus-visible{outline:3px solid var(--action,#ffd100);outline-offset:2px}"
+    },
+    {
+      "name": "Shell Nav",
+      "kind": "nav",
+      "refersTo": "topbar",
+      "description": "Sticky broadcast bar with brand, links and yellow active underline.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\">Investor Hub</a><nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Overview</a><a href=\"#\">Check a list</a><a href=\"#\">Campaigns</a><a href=\"#\">Pipeline</a></nav></header>",
+      "css": ".ds-top{background:var(--shell,#3b0a78);color:var(--shell-ink,#fff);display:flex;align-items:center;gap:28px;height:56px;padding:0 28px;font-family:var(--font-body,Saira,sans-serif);font-size:14px}.ds-brand{font-family:var(--font-display,'Saira Condensed',sans-serif);font-weight:800;font-size:20px;letter-spacing:0.03em;text-transform:uppercase;color:inherit;text-decoration:none}.ds-nav{display:flex;gap:22px;height:100%}.ds-nav a{display:flex;align-items:center;color:var(--shell-muted,#d8c9f2);text-decoration:none;font-weight:600;box-shadow:inset 0 -3px 0 transparent;transition:color .15s ease,box-shadow .2s ease}.ds-nav a:hover{color:var(--shell-ink,#fff)}.ds-nav a[aria-current=page]{color:var(--shell-ink,#fff);box-shadow:inset 0 -3px 0 var(--action,#ffd100)}.ds-nav a:focus-visible{outline:3px solid var(--action,#ffd100);outline-offset:2px}"
+    },
+    {
+      "name": "Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Flat square panel with title and muted subtitle on a shared baseline.",
+      "html": "<section class=\"ds-panel\"><div class=\"ds-ph\"><h2>Follow-ups due</h2><span>0 today · 3 overdue</span></div><p>Jitesh Agrawal · Saflex · <span class=\"ds-late\">28 days late</span></p></section>",
+      "css": ".ds-panel{background:var(--panel,#fff);border:1px solid var(--rule,#ece8f3);padding:18px;color:var(--ink,#1a1030);font-family:var(--font-body,Saira,sans-serif);font-size:14px;font-variant-numeric:tabular-nums}.ds-ph{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}.ds-ph h2{margin:0;font-family:var(--font-display,'Saira Condensed',sans-serif);font-weight:800;font-size:20px;text-transform:uppercase;letter-spacing:0.03em}.ds-ph span{color:var(--muted,#5c5170);font-size:13px}.ds-panel p{margin:0}.ds-late{color:var(--late,#b4005c);font-weight:600}"
+    },
+    {
+      "name": "Score Bug",
+      "kind": "custom",
+      "refersTo": "score-bug",
+      "description": "Signature full-width chase summary on every screen.",
+      "html": "<section class=\"ds-bug\"><div class=\"ds-bat\"><small>Week 45 · contacted</small><b>312/500</b></div><div class=\"ds-need\">Need<em>188</em>from 4 days</div><div class=\"ds-stat\"><small>Current rate</small><b>78/day</b></div><div class=\"ds-stat\"><small>Required rate</small><b class=\"ds-proj\">47/day</b></div><div class=\"ds-stat\"><small>Reply rate</small><b>4.2%</b></div></section>",
+      "css": ".ds-bug{display:grid;grid-template-columns:auto 1fr repeat(3,auto);background:var(--bug,#1a1030);color:var(--bug-ink,#fff);min-height:88px;font-family:var(--font-body,Saira,sans-serif);font-variant-numeric:tabular-nums}.ds-bat{background:var(--bat,#e6007e);color:var(--bat-ink,#fff);padding:10px 26px;display:flex;flex-direction:column;justify-content:center}.ds-bat small{font-weight:600;font-size:13px}.ds-bat b{font-family:var(--font-display,'Saira Condensed',sans-serif);font-weight:800;font-size:46px;line-height:1;letter-spacing:0.01em}.ds-need{padding:10px 26px;display:flex;align-items:center;font-family:var(--font-display,'Saira Condensed',sans-serif);font-weight:700;font-size:26px;text-transform:uppercase;letter-spacing:0.02em}.ds-need em{font-style:normal;color:var(--action,#ffd100);margin:0 9px}.ds-stat{padding:10px 22px;border-left:1px solid var(--bug-rule,#3a2e55);display:flex;flex-direction:column;justify-content:center}.ds-stat small{color:var(--bug-muted,#b8aecf);font-size:12px;text-transform:uppercase;letter-spacing:0.06em}.ds-stat b{font-family:var(--font-display,'Saira Condensed',sans-serif);font-weight:800;font-size:30px;line-height:1.1}.ds-proj{color:var(--proj,#00b3e6)}"
+    },
+    {
+      "name": "Results Tally",
+      "kind": "custom",
+      "refersTo": "score-bug",
+      "description": "List scorecard after a check; first cell in the batting colour.",
+      "html": "<div class=\"ds-tally\"><div><small>New</small><b>2</b></div><div><small>Already contacted</small><b>1</b></div><div><small>Do not contact</small><b>2</b></div><div><small>Bounced / unsub</small><b>0</b></div><div><small>Already staged</small><b>0</b></div><div><small>Repeated in list</small><b>1</b></div></div>",
+      "css": ".ds-tally{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));background:var(--bug,#1a1030);color:var(--bug-ink,#fff);font-family:var(--font-body,Saira,sans-serif)}.ds-tally div{padding:12px 16px;border-left:1px solid var(--bug-rule,#3a2e55)}.ds-tally div:first-child{background:var(--bat,#e6007e);color:var(--bat-ink,#fff);border:0}.ds-tally small{display:block;font-size:12px;text-transform:uppercase;letter-spacing:0.06em;opacity:.85}.ds-tally b{font-family:var(--font-display,'Saira Condensed',sans-serif);font-weight:800;font-size:32px;line-height:1.1}"
+    },
+    {
+      "name": "Check Plate",
+      "kind": "custom",
+      "refersTo": "check-plate",
+      "description": "The yellow action plate pairing reassurance with the check button.",
+      "html": "<div class=\"ds-plate\"><p>Nothing is marked as used until YAMM merges it.</p><button class=\"ds-pbtn\">Check list</button></div>",
+      "css": ".ds-plate{display:flex;background:var(--action,#ffd100);color:var(--action-ink,#1a1030);font-family:var(--font-body,Saira,sans-serif);font-size:14px}.ds-plate p{flex:1;margin:0;padding:14px 16px}.ds-pbtn{background:var(--bug,#1a1030);color:var(--action,#ffd100);border:0;padding:0 18px;cursor:pointer;font-family:var(--font-display,'Saira Condensed',sans-serif);font-weight:800;font-size:16px;letter-spacing:0.04em;text-transform:uppercase;transition:filter .15s ease}.ds-pbtn:hover{filter:brightness(1.06)}.ds-pbtn:focus-visible{outline:3px solid var(--action,#ffd100);outline-offset:2px}"
+    },
+    {
+      "name": "Status Badge",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Outlined status tag; dot shape doubles the colour cue.",
+      "html": "<span class=\"ds-badge ds-new\">New</span> <span class=\"ds-badge ds-dnc\">Do not contact</span> <span class=\"ds-badge ds-warn\">Staged</span>",
+      "css": ".ds-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-body,Saira,sans-serif);font-size:12px;font-weight:600;padding:2px 8px;border:1px solid currentColor}.ds-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}.ds-new{color:var(--ok,#0c7a4f)}.ds-new::before{border-radius:0}.ds-dnc{color:var(--late,#b4005c)}.ds-dnc::before{background:transparent;border:2px solid currentColor;width:5px;height:5px}.ds-warn{color:var(--warn,#9a5b00)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Run Chase",
+    "overview": "The hub reads like an IPL broadcast overlay laid over a working tool. A saturated shell bar sits on top like the channel strip, a dark score bug spans the full width beneath it on every screen, and everything below is flat panels on a pale ground. The bug states the chase in one line (contacted against target, \"Need N from D days\", current rate against required rate, reply rate), and every other surface is a supporting scorecard: tallies, worm chart, bars per batter.\n\nDensity is operational: 14px body with tabular figures throughout, tight 18px panel padding, tables with ruled rows. Character comes from colour blocks and condensed uppercase numbers, not from depth, curves or ornament. The broadcast palette (shell, batting block, projection, action) is one of four interchangeable kits (purple, blue, green, red), each in light, dark, or system mode, swapped through custom properties on the root; components never name a team colour directly.\n\nThe world refuses the category default of same-size KPI cards over a line chart: headline figures live in the bug or a tally strip, never in a grid of floating cards.",
+    "keyCharacteristics": [
+      "Full-bleed shell bar plus full-width score bug on every authenticated screen.",
+      "Flat panels, square corners, hairline rules; one shadow in the whole system, on the floating theme popover.",
+      "Saira Condensed 800 uppercase for every figure, heading and button; Saira for running text; tabular numerals everywhere.",
+      "Colour by role through tokens, so the four team kits and dark mode swap without touching components."
+    ],
+    "rules": [
+      {
+        "name": "The Kit Swap Rule",
+        "body": "Components reference roles (shell, bat, proj, action, bug), never a hex. A new surface must render correctly in all four kits and both modes without a single kit-specific override.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Plate Rule",
+        "body": "Action Yellow fills at most one control or plate per view. Secondary actions are line or dark buttons.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Pairing Rule",
+        "body": "Every role colour travels with its own ink token (shell-ink, bat-ink, action-ink). Blue and red kits use a dark bat-ink on orange; never assume white on bat.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Everything Rule",
+        "body": "`font-variant-numeric: tabular-nums` is set on the body; every figure lines up in columns and rolls without jitter.",
+        "section": "typography"
+      },
+      {
+        "name": "The Condensed Figure Rule",
+        "body": "Any number that is the point of its block is Saira Condensed 800. Running text never is.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Panel Rule",
+        "body": "Panels, bug, tally, plate, buttons and tables carry no shadow. Only a floating layer that overlaps content may take the Popover shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** put the week's headline figures in the score bug or a tally strip, condensed 800 on the bug colour.",
+      "**Do** reference role tokens (shell, bat, proj, action, bug and their inks) so all four kits and both modes work unchanged.",
+      "**Do** keep panels flat and square with a 1px rule; reserve the Popover shadow for layers that float over content.",
+      "**Do** give every status a shape cue as well as a colour (square, hollow ring, round dot, \"behind\" suffix).",
+      "**Do** use a single Action Yellow plate or button per view for the primary action."
+    ],
+    "donts": [
+      "**Don't** build a grid of same-size KPI cards over a line chart; that is what the bug replaces.",
+      "**Don't** hard-code a kit hex in a component or assume white text on bat.",
+      "**Don't** add shadows, gradients or radii above 2px to panels, buttons or the bug.",
+      "**Don't** set running text in Saira Condensed or uppercase; condensed uppercase is for figures, headings, labels and buttons."
+    ]
+  }
+}

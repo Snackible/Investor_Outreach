@@ -1,0 +1,59 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:"Azeret Mono",monospace;background:#fff;color:#000;font-size:13px}
+header{height:52px;background:#000;color:#fff;display:flex;align-items:center;padding:0 28px;gap:28px}
+header b{font-weight:800}
+header a{color:#fff;text-decoration:none;padding:6px 10px}
+header a.on{background:#fff;color:#000}
+header span{margin-left:auto}
+.code{height:200px;margin:0 28px;border-bottom:1px solid #000;
+background:
+repeating-linear-gradient(90deg,#000 0 1px,#fff 1px 3px,#000 3px 5px,#fff 5px 6px,#000 6px 7px,#fff 7px 11px,#000 11px 12px,#fff 12px 13px,#000 13px 16px,#fff 16px 17px);
+position:relative}
+.code:after{content:"";position:absolute;top:0;bottom:0;left:92.6%;right:0;background:repeating-linear-gradient(90deg,#000 0 1px,#fff 1px 6px)}
+.legend{display:flex;justify-content:space-between;margin:8px 28px 0;font-size:12px}
+main{display:grid;grid-template-columns:560px 1fr;gap:0;margin:22px 28px 0;border-top:2px solid #000}
+.k{display:grid;grid-template-columns:1fr auto;padding:12px 18px 12px 0;border-bottom:1px solid #000}
+.k b{font-size:30px;font-weight:800}
+.k small{grid-column:1/-1;font-size:12px}
+.big b{font-size:72px;line-height:1}
+.w{height:16px;margin-top:8px;grid-column:1/-1;background:linear-gradient(90deg,#000 62.4%,transparent 62.4%),repeating-linear-gradient(90deg,#000 0 1px,#fff 1px 10px)}
+.t{border-left:2px solid #000;padding-left:22px}
+.t h2{font-size:13px;font-weight:800;padding:12px 0;border-bottom:1px solid #000;display:flex;justify-content:space-between}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-weight:600;padding:8px 8px 8px 0;border-bottom:1px solid #000;font-size:12px}
+td{padding:10px 8px;border-bottom:1px solid #000}
+tr.inv td{background:#000;color:#fff}
+.check{display:flex;margin-top:14px;border:2px solid #000}
+.check div{flex:1;padding:12px}
+.check button{background:#000;color:#fff;border:0;padding:0 22px;font:800 13px "Azeret Mono"}
+</style></head><body>
+<header><b>INVESTOR_HUB</b><a class="on" href="#">OVERVIEW</a><a href="#">CHECK</a><a href="#">CAMPAIGNS</a><a href="#">PIPELINE</a><a href="#">CONTACTS</a><a href="#">STAGED</a><span>ADITI · 09:30 · SAMPLE DATA</span></header>
+<div class="code"></div>
+<div class="legend"><span>HASHMAP · 21,486 EMAILS · 1 BAR = 1 EMAIL</span><span>CONTACTED 19,903 · DNC 8,233 OVERLAP · BOUNCED 612 · STAGED 1,204 (SPARSE TAIL)</span></div>
+<main>
+<section>
+  <div class="k big"><span>CONTACTED · WK 45</span><b>312/500</b><div class="w"></div><small>62.4% · 188 TO GO · 4 DAYS LEFT</small></div>
+  <div class="k"><span>REPLY RATE 30D</span><b>3.8%</b></div>
+  <div class="k"><span>MEETINGS THIS WEEK</span><b>6</b></div>
+  <div class="k"><span>IN DUE DILIGENCE</span><b>3</b></div>
+  <div class="k"><span>LAST CAMPAIGN BOUNCE</span><b>6.1%</b><small>CHINMAY REVIEWED (7) · 28 BOUNCED · NOW BLOCKED</small></div>
+</section>
+<section class="t">
+  <h2><span>FOLLOW-UPS DUE</span><span>9 TODAY · 3 OVERDUE (INVERTED)</span></h2>
+  <table>
+    <tr><th>DUE</th><th>INVESTOR</th><th>FIRM</th><th>STAGE</th><th>OWNER</th></tr>
+    <tr class="inv"><td>-4D</td><td>VIVEK RAO</td><td>SAFFRON GROWTH FUND</td><td>1ST FOLLOW-UP</td><td>STUTI</td></tr>
+    <tr class="inv"><td>-2D</td><td>KARAN BHATIA</td><td>NORTHPEAK VENTURES</td><td>DATA TO BE SENT</td><td>HEET</td></tr>
+    <tr><td>TODAY</td><td>RITIKA MENON</td><td>LUMEN FAMILY OFFICE</td><td>2ND MEET</td><td>SAUMYA</td></tr>
+    <tr><td>TODAY</td><td>NEHA KULKARNI</td><td>ARBOR ANGELS</td><td>WAITING</td><td>HITANSH</td></tr>
+    <tr><td>TODAY</td><td>FARAH SIDDIQUI</td><td>COASTLINE CAPITAL</td><td>DUE DILIGENCE</td><td>AS</td></tr>
+  </table>
+  <div class="check"><div>PASTE EMAILS / DROP CSV / PICK SHEET TAB</div><button>CHECK →</button></div>
+</section>
+</main>
+</body></html>

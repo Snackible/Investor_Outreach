@@ -1,0 +1,63 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:"Noto Sans JP",sans-serif;background:#EEF0F3;color:#14171C;font-size:12.5px;line-height:1.45}
+header{background:#fff;border-bottom:3px solid #E60012;display:flex;align-items:center;height:48px;padding:0 16px;gap:20px}
+header b{font-weight:900;font-size:16px}
+header b em{font-style:normal;background:#E60012;color:#fff;padding:2px 6px;margin-left:6px;font-size:12px}
+header a{color:#14171C;text-decoration:none;font-weight:700;padding:4px 8px;font-size:13px}
+header a.on{background:#14171C;color:#fff}
+header span{margin-left:auto;font-size:12px}
+.sub{background:#14171C;color:#fff;display:flex;gap:18px;padding:6px 16px;font-size:12px}
+.sub b{color:#FFD400}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:min-content;gap:8px;padding:10px 16px}
+.m{background:#fff;border:1px solid #C9CED6}
+.m h3{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;font-weight:700;border-bottom:1px solid #C9CED6}
+.m h3 em{font-style:normal;background:#E60012;color:#fff;padding:4px 9px}
+.m h3 span{padding-right:8px;font-weight:400;font-size:12px;color:#4A4F57}
+.m .in{padding:8px 10px}
+.big{font-size:40px;font-weight:900;line-height:1.1}
+.bar{height:10px;background:#EEF0F3;margin:6px 0}.bar i{display:block;height:100%;width:62.4%;background:#E60012}
+table{width:100%;border-collapse:collapse}
+td,th{padding:5px 8px;border-bottom:1px solid #E3E6EA;text-align:left}
+th{font-weight:700;background:#F6F7F9;font-size:12px}
+.n{text-align:right;font-variant-numeric:tabular-nums}
+.late{color:#E60012;font-weight:700}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:1px 5px;margin-right:4px}
+.b-new{background:#FFD400}.b-hot{background:#E60012;color:#fff}.b-blue{background:#0068B7;color:#fff}
+.s2{grid-column:span 2}.s3{grid-column:span 3}.s4{grid-column:span 4}
+.check textarea{width:100%;height:58px;border:1px solid #C9CED6;font:12px "Noto Sans JP";padding:6px;resize:none}
+.check button{width:100%;margin-top:6px;background:#E60012;color:#fff;border:0;padding:9px;font:700 13px "Noto Sans JP"}
+</style></head><body>
+<header><b>Investor Hub<em>β</em></b><a class="on" href="#">Overview</a><a href="#">Check a list</a><a href="#">Campaigns</a><a href="#">Pipeline</a><a href="#">Contacts</a><a href="#">Staged</a><span>Aditi · admin · synced 09:30 · sample data</span></header>
+<div class="sub"><span>Wed 4 Nov</span><span>Week 45: <b>312 / 500</b></span><span>Overdue: <b>3</b></span><span>Bounce alert: <b>Chinmay reviewed (7)</b></span><span>Cluster: 4.1 MB / 512 MB</span></div>
+<div class="grid">
+  <div class="m s2"><h3><em>This week</em><span>Mon 2 – Sun 8</span></h3><div class="in"><div class="big">312<small style="font-size:16px;color:#4A4F57"> / 500</small></div><div class="bar"><i></i></div>188 to go · 4 days · on pace for 520</div></div>
+  <div class="m"><h3><em>Hashmap</em></h3><div class="in"><div class="big" style="font-size:30px">21,486</div><span class="badge b-new">+212</span>today</div></div>
+  <div class="m"><h3><em>Replies</em><span>30d</span></h3><div class="in"><div class="big" style="font-size:30px">3.8%</div><span class="badge b-blue">+0.6pt</span></div></div>
+  <div class="m"><h3><em>Meetings</em></h3><div class="in"><div class="big" style="font-size:30px">6</div>3 in DD</div></div>
+  <div class="m"><h3><em>Staged</em></h3><div class="in"><div class="big" style="font-size:30px">1,204</div>not merged</div></div>
+  <div class="m s4"><h3><em>Follow-ups due</em><span>9 today · 3 overdue</span></h3>
+    <table><tr><th>Investor</th><th>Firm</th><th>Stage</th><th>Owner</th><th>Due</th></tr>
+    <tr><td><span class="badge b-hot">!</span><b>Vivek Rao</b></td><td>Saffron Growth Fund</td><td>1st follow-up pending</td><td>Stuti</td><td class="late">4 days late</td></tr>
+    <tr><td><span class="badge b-hot">!</span><b>Karan Bhatia</b></td><td>Northpeak Ventures</td><td>Data to be sent</td><td>Heet</td><td class="late">2 days late</td></tr>
+    <tr><td><b>Ritika Menon</b></td><td>Lumen Family Office</td><td>2nd meet scheduled</td><td>Saumya</td><td>Today 15:00</td></tr>
+    <tr><td><b>Neha Kulkarni</b></td><td>Arbor Angels</td><td>Waiting for reply</td><td>Hitansh</td><td>Today</td></tr>
+    <tr><td><b>Farah Siddiqui</b></td><td>Coastline Capital</td><td>Due diligence</td><td>AS</td><td>Today</td></tr>
+    <tr><td><b>Arjun Mehta</b></td><td>Banyan Seed Partners</td><td>Connected on WhatsApp</td><td>Aditi</td><td>Today</td></tr></table></div>
+  <div class="m s2 check"><h3><em>Check a list</em><span>UPL-0043</span></h3><div class="in"><textarea>paste emails here…</textarea><button>Check against hashmap</button></div></div>
+  <div class="m s3"><h3><em>Campaigns</em><span>latest YAMM tabs</span></h3>
+    <table><tr><th>Tab</th><th class="n">Sent</th><th class="n">Open</th><th class="n">Reply</th><th class="n">Bounce</th></tr>
+    <tr><td><span class="badge b-new">NEW</span>Family Office 22/9</td><td class="n">35</td><td class="n">46%</td><td class="n">5.7%</td><td class="n">2</td></tr>
+    <tr><td>Chinmay reviewed (7)</td><td class="n">455</td><td class="n">38%</td><td class="n">2.4%</td><td class="n late">28</td></tr>
+    <tr><td>Pharma Industry</td><td class="n">201</td><td class="n">41%</td><td class="n">3.0%</td><td class="n">9</td></tr></table></div>
+  <div class="m s3"><h3><em>Owners</em><span>contacted this week</span></h3>
+    <table><tr><th>Owner</th><th class="n">Contacted</th><th class="n">Due</th><th class="n">Overdue</th></tr>
+    <tr><td>Chinmay</td><td class="n">96</td><td class="n">0</td><td class="n">0</td></tr>
+    <tr><td>Stuti</td><td class="n">84</td><td class="n">2</td><td class="n late">1</td></tr>
+    <tr><td>Heet</td><td class="n">71</td><td class="n">3</td><td class="n late">1</td></tr></table></div>
+</div>
+</body></html>

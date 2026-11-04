@@ -1,0 +1,57 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#F8FAFC;color:#0F172A;display:grid;grid-template-columns:240px 1fr;font-size:14px}
+aside{background:#fff;border-right:1px solid #E2E8F0;padding:20px 12px}
+aside b{display:block;padding:4px 10px 20px;font-size:16px}
+aside a{display:block;padding:8px 10px;border-radius:6px;color:#475569;text-decoration:none;font-weight:500;margin-bottom:2px}
+aside a.on{background:#EFF6FF;color:#2563EB}
+main{padding:28px 32px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.top h1{font-size:22px;font-weight:650}
+.top span{color:#64748B;font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}
+.k{background:#fff;border:1px solid #E2E8F0;border-radius:10px;padding:16px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.k small{color:#64748B;font-size:13px}
+.k b{display:block;font-size:28px;font-weight:650;margin:6px 0}
+.bar{height:6px;background:#E2E8F0;border-radius:3px}.bar i{display:block;height:100%;width:62%;background:#2563EB;border-radius:3px}
+.k p{color:#64748B;font-size:12.5px;margin-top:6px}
+.grid{display:grid;grid-template-columns:1fr 1.4fr;gap:16px}
+.card{background:#fff;border:1px solid #E2E8F0;border-radius:10px;padding:18px}
+.card h2{font-size:15px;font-weight:600;margin-bottom:12px;display:flex;justify-content:space-between}
+.card h2 span{color:#64748B;font-weight:400;font-size:13px}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;color:#64748B;font-weight:500;font-size:12.5px;padding:8px;border-bottom:1px solid #E2E8F0}
+td{padding:10px 8px;border-bottom:1px solid #F1F5F9}
+.pill{font-size:12px;padding:2px 8px;border-radius:999px;background:#F1F5F9;color:#475569}
+.pill.r{background:#FEF2F2;color:#B91C1C}
+.check{margin-top:16px;border:1px dashed #CBD5E1;border-radius:10px;padding:16px;display:flex;justify-content:space-between;align-items:center;color:#64748B}
+.check button{background:#2563EB;color:#fff;border:0;border-radius:8px;padding:10px 16px;font-weight:600}
+</style></head><body>
+<aside><b>Investor Hub</b><a class="on" href="#">Overview</a><a href="#">Check a list</a><a href="#">Campaigns</a><a href="#">Pipeline</a><a href="#">Contacts</a><a href="#">Staged</a></aside>
+<main>
+<div class="top"><h1>Overview</h1><span>Aditi · synced 09:30 · sample data</span></div>
+<div class="kpis">
+  <div class="k"><small>Contacted this week</small><b>312 / 500</b><div class="bar"><i></i></div><p>188 to go · 4 days left</p></div>
+  <div class="k"><small>Emails in hashmap</small><b>21,486</b><p>1,204 staged · 8,233 do not contact</p></div>
+  <div class="k"><small>Reply rate (30 days)</small><b>3.8%</b><p>+0.6 pts vs previous 30 days</p></div>
+  <div class="k"><small>Meetings / in DD</small><b>6 / 3</b><p>This week</p></div>
+</div>
+<div class="grid">
+  <div class="card"><h2>Weekly contacted <span>last 8 weeks</span></h2>
+    <svg width="100%" height="220" viewBox="0 0 440 220"><line x1="0" y1="40" x2="440" y2="40" stroke="#CBD5E1" stroke-dasharray="4"/><text x="4" y="34" font-size="11" fill="#64748B">Target 500</text><g fill="#93C5FD"><rect x="10" y="120" width="34" height="100"/><rect x="65" y="95" width="34" height="125"/><rect x="120" y="70" width="34" height="150"/><rect x="175" y="110" width="34" height="110"/><rect x="230" y="60" width="34" height="160"/><rect x="285" y="48" width="34" height="172"/><rect x="340" y="80" width="34" height="140"/></g><rect x="395" y="95" width="34" height="125" fill="#2563EB"/></svg>
+  </div>
+  <div class="card"><h2>Follow-ups due <span>9 today · 3 overdue</span></h2>
+    <table><tr><th>Investor</th><th>Firm</th><th>Stage</th><th>Owner</th><th>Due</th></tr>
+    <tr><td>Vivek Rao</td><td>Saffron Growth Fund</td><td>1st follow-up pending</td><td>Stuti</td><td><span class="pill r">4d late</span></td></tr>
+    <tr><td>Karan Bhatia</td><td>Northpeak Ventures</td><td>Data to be sent</td><td>Heet</td><td><span class="pill r">2d late</span></td></tr>
+    <tr><td>Ritika Menon</td><td>Lumen Family Office</td><td>2nd meet scheduled</td><td>Saumya</td><td><span class="pill">Today</span></td></tr>
+    <tr><td>Neha Kulkarni</td><td>Arbor Angels</td><td>Waiting for reply</td><td>Hitansh</td><td><span class="pill">Today</span></td></tr>
+    <tr><td>Farah Siddiqui</td><td>Coastline Capital</td><td>Due diligence</td><td>AS</td><td><span class="pill">Today</span></td></tr></table>
+  </div>
+</div>
+<div class="check">Paste emails, drop a CSV or pick a sheet tab to check against the hashmap.<button>Check list</button></div>
+</main>
+</body></html>
