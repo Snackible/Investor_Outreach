@@ -32,26 +32,42 @@ function quoteTab(title: string) {
   return `'${title.replace(/'/g, "''")}'`;
 }
 
+async function fetchJson<T>(url: string): Promise<T> {
+  const { access_token } = await auth().authorize();
+  const res = await fetch(url, { headers: { Authorization: `Bearer ${access_token}` } });
+  if (!res.ok) {
+    const body = await res.json().catch(() => null);
+    throw { response: { status: res.status, data: body } };
+  }
+  return res.json();
+}
+
 /** Reads every tab of a spreadsheet as a grid of strings. Cached for five minutes. */
-export async function readSpreadsheet(spreadsheetId: string, opts: { fresh?: boolean; onlyTabs?: string[]; onlySheetIds?: number[] } = {}): Promise<Tab[]> {
+export async function readSpreadsheet(
+  spreadsheetId: string,
+  opts: { fresh?: boolean; onlyTabs?: string[]; onlySheetIds?: number[]; excludeTabs?: RegExp } = {}
+): Promise<Tab[]> {
   const cacheKey = spreadsheetId + (opts.onlyTabs ? "|" + opts.onlyTabs.join(",") : "") + (opts.onlySheetIds ? "#" + opts.onlySheetIds.join(",") : "");
   const hit = cache.get(cacheKey);
   if (hit && !opts.fresh && Date.now() - hit.at < TTL_MS) return hit.tabs;
 
   try {
-    const meta = await auth().request<{ sheets: { properties: { title: string; sheetId: number } }[] }>({
-      url: `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}?fields=sheets.properties(title,sheetId)`,
-    });
-    let titles = meta.data.sheets.filter((s) => !opts.onlySheetIds || opts.onlySheetIds.includes(s.properties.sheetId)).map((s) => s.properties.title);
+    const meta = await fetchJson<{ sheets: { properties: { title: string; sheetId: number } }[] }>(
+      `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}?fields=sheets.properties(title,sheetId)`
+    );
+    let titles = meta.sheets.filter((s) => !opts.onlySheetIds || opts.onlySheetIds.includes(s.properties.sheetId)).map((s) => s.properties.title);
     if (opts.onlyTabs) titles = titles.filter((t) => opts.onlyTabs!.includes(t));
+    // Tabs the app never reads (dashboards, master-search rollups) are dropped here, before the request,
+    // instead of after: those are often the heaviest tabs, so this is most of the payload's weight.
+    if (opts.excludeTabs) titles = titles.filter((t) => !opts.excludeTabs!.test(t));
     if (titles.length === 0) return [];
 
     const params = new URLSearchParams({ valueRenderOption: "FORMATTED_VALUE", majorDimension: "ROWS" });
     for (const t of titles) params.append("ranges", quoteTab(t));
-    const res = await auth().request<{ valueRanges: { values?: string[][] }[] }>({
-      url: `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values:batchGet?${params}`,
-    });
-    const tabs = titles.map((title, i) => ({ title, rows: res.data.valueRanges[i]?.values ?? [] }));
+    const res = await fetchJson<{ valueRanges: { values?: string[][] }[] }>(
+      `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values:batchGet?${params}`
+    );
+    const tabs = titles.map((title, i) => ({ title, rows: res.valueRanges[i]?.values ?? [] }));
     cache.set(cacheKey, { at: Date.now(), tabs });
     return tabs;
   } catch (err: unknown) {

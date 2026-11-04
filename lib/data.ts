@@ -188,7 +188,11 @@ function refresh(fresh: boolean): Promise<HubData> {
     const trackerTabs = env.trackerTabIds();
     const read = async (file: SourceFile, id: string) => {
       try {
-        return await readSpreadsheet(id, { fresh: opts.fresh, ...(file === "tracker" && trackerTabs.length ? { onlySheetIds: trackerTabs } : {}) });
+        return await readSpreadsheet(id, {
+          fresh: opts.fresh,
+          excludeTabs: SKIP_TABS,
+          ...(file === "tracker" && trackerTabs.length ? { onlySheetIds: trackerTabs } : {}),
+        });
       } catch (err) {
         const e = err as SheetAccessError;
         problems.push({ file, status: e.status, message: e.message });

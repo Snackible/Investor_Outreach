@@ -2,7 +2,10 @@
 export default function Loading() {
   return (
     <div className="skeleton" role="status" aria-label="Loading">
-      <div className="skeleton-title" />
+      <div className="skeleton-head">
+        <div className="skeleton-title" />
+        <span className="spinner" aria-hidden="true" />
+      </div>
       <div className="skeleton-panels">
         <div className="skeleton-panel" />
         <div className="skeleton-panel" />
