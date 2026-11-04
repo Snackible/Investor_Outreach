@@ -163,12 +163,25 @@ function pipelineFrom(tab: Tab, now: Date): PipelineEntry[] {
 
 let inflight: Promise<HubData> | null = null;
 let last: { at: number; data: HubData } | null = null;
+const FRESH_MS = 2 * 60 * 1000;
 
-/** Loads all three investor sheets. Shares one in-flight read and keeps the result for two minutes. */
+/**
+ * Loads all three investor sheets. Returns cached data at once and refreshes in the
+ * background when it is older than two minutes, so a click never waits on the sheets
+ * (except the very first load). `fresh` forces a blocking re-read, used by Sync.
+ */
 export async function loadHubData(opts: { fresh?: boolean } = {}): Promise<HubData> {
-  if (!opts.fresh && last && Date.now() - last.at < 2 * 60 * 1000) return last.data;
+  if (!opts.fresh && last) {
+    if (Date.now() - last.at >= FRESH_MS && !inflight) void refresh(false).catch(() => {});
+    return last.data;
+  }
+  return refresh(opts.fresh ?? false);
+}
+
+function refresh(fresh: boolean): Promise<HubData> {
   if (inflight) return inflight;
   inflight = (async () => {
+    const opts = { fresh };
     const ids = env.sheets();
     const now = new Date();
     const problems: LoadProblem[] = [];

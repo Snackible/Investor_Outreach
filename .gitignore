@@ -8,3 +8,4 @@ node_modules/
 *-key.json
 .impeccable/review/
 *.claude
+*.impeccable

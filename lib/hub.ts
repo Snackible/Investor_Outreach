@@ -1,7 +1,7 @@
 import "server-only";
 import { cache } from "react";
 import { followUps, loadHubData, type FollowUps, type HubData, type LoadProblem } from "./data";
-import { contactedIn, counts, syncHashmap, type SyncResult } from "./hashmap";
+import { contactedIn, counts, lastSyncFailure, lastSyncResult, syncHashmap, type SyncResult } from "./hashmap";
 import { QuotaError } from "./mongo";
 import { readRange } from "./range";
 
@@ -31,10 +31,19 @@ export const hubContext = cache(async (): Promise<HubContext> => {
   let sync: SyncResult | null = null;
   let c: HubContext["counts"] = null;
   const bug = { thisWeek: 0, today: 0, lastWeek: 0 };
-  try {
-    sync = await syncHashmap(data, { ifOlderThanMs: 15 * 60 * 1000 });
-  } catch (err) {
-    problems.push({ file: "hashmap", message: err instanceof QuotaError ? err.message : `Couldn't update the hashmap: ${(err as Error).message}` });
+  const syncing = syncHashmap(data, { ifOlderThanMs: 15 * 60 * 1000 });
+  if (lastSyncResult()) {
+    // Already synced once: never make a click wait. A failure shows on the next page load.
+    sync = lastSyncResult();
+    syncing.catch(() => {});
+    const failure = lastSyncFailure();
+    if (failure) problems.push({ file: "hashmap", message: failure });
+  } else {
+    try {
+      sync = await syncing;
+    } catch (err) {
+      problems.push({ file: "hashmap", message: err instanceof QuotaError ? err.message : `Couldn't update the hashmap: ${(err as Error).message}` });
+    }
   }
   try {
     const now = new Date();

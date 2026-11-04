@@ -1,6 +1,6 @@
 import "server-only";
 import type { AnyBulkWriteOperation } from "mongodb";
-import { assertRoomToWrite, db } from "./mongo";
+import { assertRoomToWrite, db, QuotaError } from "./mongo";
 import { STATUS_RANK, statusesFromSheets, type HubData, type Status } from "./data";
 import { emailsIn } from "./emails";
 
@@ -27,16 +27,39 @@ async function col() {
 
 let snapshot: { at: number; map: Map<string, EmailDoc> } | null = null;
 
-/** The whole hashmap in memory: about 6 MB even at 200,000 emails. Cached one minute. */
+let loadingSnapshot: Promise<Map<string, EmailDoc>> | null = null;
+
+function loadSnapshot(): Promise<Map<string, EmailDoc>> {
+  loadingSnapshot ??= (async () => {
+    const docs = await (await col()).find({}).toArray();
+    const map = new Map(docs.map((d) => [d._id, d]));
+    snapshot = { at: Date.now(), map };
+    return map;
+  })().finally(() => {
+    loadingSnapshot = null;
+  });
+  return loadingSnapshot;
+}
+
+/**
+ * The whole hashmap in memory: about 6 MB even at 200,000 emails. Served instantly from memory and
+ * refreshed in the background after a minute; writes clear it so the next read is always current.
+ */
 export async function hashmap(fresh = false): Promise<Map<string, EmailDoc>> {
-  if (!fresh && snapshot && Date.now() - snapshot.at < 60 * 1000) return snapshot.map;
-  const docs = await (await col()).find({}).toArray();
-  const map = new Map(docs.map((d) => [d._id, d]));
-  snapshot = { at: Date.now(), map };
-  return map;
+  if (!fresh && snapshot) {
+    if (Date.now() - snapshot.at >= 60 * 1000) void loadSnapshot().catch(() => {});
+    return snapshot.map;
+  }
+  return loadSnapshot();
 }
 
 let lastSync: { at: number; result: SyncResult } | null = null;
+let lastSyncError: string | null = null;
+
+export function lastSyncFailure() {
+  return lastSyncError;
+}
+
 let syncing: Promise<SyncResult> | null = null;
 
 export type SyncResult = { inserted: number; upgraded: number; promoted: number; backfill: boolean; at: Date };
@@ -89,11 +112,17 @@ export async function syncHashmap(data: HubData, opts: { ifOlderThanMs?: number 
       snapshot = null;
     }
     const result = { inserted, upgraded, promoted, backfill: history > 0, at: now };
+    lastSyncError = null;
     lastSync = { at: Date.now(), result };
     return result;
-  })().finally(() => {
-    syncing = null;
-  });
+  })()
+    .catch((err: unknown) => {
+      lastSyncError = err instanceof QuotaError ? err.message : `Couldn't update the hashmap: ${(err as Error).message}`;
+      throw err;
+    })
+    .finally(() => {
+      syncing = null;
+    });
   return syncing;
 }
 
