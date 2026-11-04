@@ -7,3 +7,4 @@ node_modules/
 *credentials*.env
 *-key.json
 .impeccable/review/
+*.claude
