@@ -6,6 +6,6 @@ node_modules/
 # service-account keys and Atlas credentials must never be committed
 *credentials*.env
 *-key.json
-.impeccable/review/
+.impeccable
 *.claude
 *.impeccable
