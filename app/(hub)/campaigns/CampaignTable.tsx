@@ -33,7 +33,7 @@ function Arrow({ dir }: { dir: "asc" | "desc" | null }) {
 
 export function CampaignTable({ rows }: { rows: Row[] }) {
   const [owner, setOwner] = useState("all");
-  const [sort, setSort] = useState<{ key: Key; dir: "asc" | "desc" }>({ key: "sent", dir: "desc" });
+  const [sort, setSort] = useState<{ key: Key; dir: "asc" | "desc" }>({ key: "date", dir: "desc" });
   const owners = useMemo(() => [...new Set(rows.map((r) => r.owner))].sort(), [rows]);
 
   const shown = useMemo(() => {
