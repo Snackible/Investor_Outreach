@@ -30,7 +30,6 @@ export default async function ContactsPage({ searchParams }: { searchParams: Pro
       <div className="page-head">
         <div>
           <h1>Contacts</h1>
-          <p>Search any email, name or firm to see everywhere it appears: every list, its YAMM status in each, its pipeline stage and its hashmap status.</p>
         </div>
       </div>
       <form className="panel" action="/contacts" style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "end" }}>

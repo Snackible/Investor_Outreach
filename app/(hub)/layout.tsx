@@ -7,6 +7,7 @@ import { Nav } from "@/components/Nav";
 import { ThemeMenu } from "@/components/ThemeMenu";
 import { ScoreBug } from "@/components/ScoreBug";
 import { BrandMark } from "@/components/BrandMark";
+import { NotifyBell } from "@/components/NotifyBell";
 
 export const dynamic = "force-dynamic";
 
@@ -24,6 +25,7 @@ export default async function HubLayout({ children }: { children: React.ReactNod
         </Link>
         <Nav />
         <div className="topbar-end">
+          <NotifyBell items={ctx.followUps.due} overdue={ctx.followUps.overdue} />
           <ThemeMenu />
           <span className="who">{session.name}</span>
           <form action="/api/logout" method="post">

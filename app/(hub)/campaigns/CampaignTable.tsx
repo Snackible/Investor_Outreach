@@ -146,7 +146,7 @@ export function CampaignTable({ rows }: { rows: Row[] }) {
             </tbody>
           </table>
         </div>
-        <p className="panel-foot">Bounce rates of 5% or more are highlighted. Bounced emails are blocked in the hashmap at the next sync.</p>
+        <p className="panel-foot">5%+ bounce rate highlighted.</p>
       </section>
     </div>
   );

@@ -145,6 +145,38 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .topbar-end form button { background: none; border: 0; color: var(--shell-muted); cursor: pointer; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .topbar-end form button:hover { color: var(--shell-ink); }
 
+/* Notify bell */
+.notify-bell { position: relative; }
+.notify-bell > button {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--shell-ink); border-radius: var(--radius); cursor: pointer;
+}
+.notify-bell > button:hover { background: rgba(255, 255, 255, 0.18); }
+.notify-count {
+  position: absolute; top: -6px; right: -6px; min-width: 16px; height: 16px; padding: 0 3px;
+  background: var(--action); color: var(--action-ink); border-radius: 8px;
+  font-size: 10px; font-weight: 800; line-height: 16px; text-align: center;
+}
+.notify-count.late { background: var(--late); color: #fff; }
+.notify-pop {
+  position: absolute; right: 0; top: calc(100% + 8px); width: 290px;
+  background: var(--panel); color: var(--ink); border: 1px solid var(--rule-strong);
+  box-shadow: 0 12px 32px rgba(10, 4, 30, 0.28); z-index: 30;
+}
+.notify-pop-head { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 14px; border-bottom: 1px solid var(--rule); }
+.notify-pop-head b { font-size: 13px; }
+.notify-pop-head .muted { font-size: 12px; }
+.notify-pop ul { list-style: none; margin: 0; padding: 0; max-height: 320px; overflow-y: auto; }
+.notify-pop li + li { border-top: 1px solid var(--rule); }
+.notify-pop li a { display: block; padding: 9px 14px; color: inherit; text-decoration: none; }
+.notify-pop li a:hover { background: var(--chip); }
+.notify-name { display: block; font-weight: 600; font-size: 13px; }
+.notify-meta { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+.notify-empty { padding: 16px 14px; font-size: 13px; color: var(--muted); margin: 0; }
+.notify-all { display: block; text-align: center; padding: 10px; font-size: 12px; font-weight: 600; border-top: 1px solid var(--rule); color: var(--ink); text-decoration: none; }
+.notify-all:hover { background: var(--chip); }
+
 /* Theme menu */
 .theme { position: relative; }
 .theme > button {

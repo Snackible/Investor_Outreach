@@ -158,7 +158,7 @@ export function CheckClient({ serviceAccount }: { serviceAccount: string }) {
             </div>
           )}
           <div className="plate">
-            <p>Checks against {rows ? "the hashmap" : "every email ever contacted, bounced, staged or on the Exhausted list"}. Nothing is saved unless you stage it.</p>
+            <p>Nothing is saved unless you stage it.</p>
             <button className="btn" type="submit" disabled={busy || (source === "sheet" ? !sheet.trim() : !text.trim())}>
               {busy ? "Checking…" : "Check list"}
             </button>

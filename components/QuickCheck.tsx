@@ -23,7 +23,7 @@ export function QuickCheck() {
         <textarea id="quick" rows={3} style={{ minHeight: 84 }} placeholder="one per line, or a whole column copied from a sheet" value={text} onChange={(e) => setText(e.target.value)} />
       </div>
       <div className="plate">
-        <p>Nothing is marked as used until YAMM merges it. New emails can be saved as staged.</p>
+        <p>Nothing is marked as used until YAMM merges it.</p>
         <button className="btn" type="submit" disabled={!text.trim()}>
           Check list
         </button>

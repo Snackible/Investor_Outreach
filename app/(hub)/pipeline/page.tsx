@@ -43,7 +43,6 @@ export default async function PipelinePage({ searchParams }: { searchParams: Pro
       <div className="page-head">
         <div>
           <h1>Pipeline</h1>
-          <p>Read live from the Investor Tracker tabs. Stages are mapped from each tab&apos;s phase or status column onto one list.</p>
         </div>
       </div>
       <div className="cols">
@@ -68,7 +67,7 @@ export default async function PipelinePage({ searchParams }: { searchParams: Pro
               </div>
             )}
           </div>
-          <p className="panel-foot">Unsorted means the tab&apos;s status text didn&apos;t match a stage. Pick a stage in the sheet to sort it.</p>
+          <p className="panel-foot">Unsorted: status text didn&apos;t match a stage.</p>
         </section>
         <section className="panel">
           <div className="panel-head">
@@ -108,7 +107,7 @@ export default async function PipelinePage({ searchParams }: { searchParams: Pro
               </tbody>
             </table>
           </div>
-          <p className="panel-foot">Stale means the follow-up date passed more than 30 days ago.</p>
+          <p className="panel-foot">Stale: follow-up date 30+ days old.</p>
         </section>
       </div>
       <div style={{ marginTop: 22 }}>

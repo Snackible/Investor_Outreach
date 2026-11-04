@@ -21,7 +21,7 @@ export default async function StagedPage({ searchParams }: { searchParams: Promi
       <div className="page-head">
         <div>
           <h1>Staged</h1>
-          <p>Emails checked and saved but not yet merged by YAMM. They aren&apos;t counted as used, and move to contacted on the first sync after YAMM merges them.</p>
+          <p>Not yet merged by YAMM, so not counted as used.</p>
         </div>
       </div>
       <section className="panel" style={{ marginBottom: 16 }}>

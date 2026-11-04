@@ -37,7 +37,6 @@ export default async function CampaignsPage({ searchParams }: { searchParams: Pr
       <div className="page-head">
         <div>
           <h1>Campaigns</h1>
-          <p>Every tab YAMM has merged, read live from the sheets. Rates use YAMM&apos;s latest status per email, so opens include anyone who later clicked or replied.</p>
         </div>
       </div>
       <section className="panel" style={{ marginBottom: 16 }}>
@@ -47,10 +46,7 @@ export default async function CampaignsPage({ searchParams }: { searchParams: Pr
           from={range.from && range.preset === "custom" ? isoDay(range.from) : ""}
           to={range.to && range.preset === "custom" ? isoDay(new Date(range.to.getTime() - 86400000)) : ""}
         />
-        <p className="panel-foot" style={{ marginTop: 4 }}>
-          A campaign&apos;s date is the date in its tab name, or the day the hub first saw it merged.
-          {undated.length > 0 && ` YAMM doesn't record send dates, so ${undated.length} older tabs have none; they're listed separately below.`}
-        </p>
+        {undated.length > 0 && <p className="panel-foot" style={{ marginTop: 4 }}>{undated.length} tabs have no date; listed separately below.</p>}
       </section>
       {all.length === 0 ? (
         <section className="panel empty">
