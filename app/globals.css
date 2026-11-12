@@ -244,6 +244,7 @@ a.bug-stat:hover { background: color-mix(in srgb, var(--bug-ink) 7%, transparent
 .panel-head h2 { font-family: var(--font-display); font-weight: 800; font-size: 20px; text-transform: uppercase; letter-spacing: 0.03em; }
 .panel-head span, .panel-head a { color: var(--muted); font-size: 13px; }
 .panel-foot { margin-top: 12px; color: var(--muted); font-size: 13px; }
+.tally-scope { margin-bottom: 8px; color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
 
 /* Notices */
 .notice { border: 1px solid var(--rule-strong); background: var(--panel); padding: 12px 16px; margin-bottom: 16px; display: grid; gap: 4px; }

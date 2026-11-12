@@ -63,7 +63,8 @@ export function CampaignTable({ rows }: { rows: Row[] }) {
 
   return (
     <div className="stack">
-      <section className="tally" aria-label="All campaigns">
+      <p className="tally-scope">{owner === "all" ? "Everyone" : owner}</p>
+      <section className="tally" aria-label={owner === "all" ? "All campaigns" : `Campaigns for ${owner}`}>
         <div>
           <small>Sent</small>
           <b>{t.sent.toLocaleString("en-IN")}</b>
