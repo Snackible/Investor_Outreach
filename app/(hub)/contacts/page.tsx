@@ -45,14 +45,14 @@ export default async function ContactsPage({ searchParams }: { searchParams: Pro
       <div className="stack" style={{ marginTop: 16 }}>
         {needle.length < 2 && counts && (
           <section className="panel empty">
-            <b>{n(counts.total)} emails in the hashmap.</b>
+            <b>{n(counts.total)} emails on record.</b>
             {n(counts.contacted)} contacted, {n(counts.do_not_contact)} do not contact, {n(counts.bounced)} bounced, {n(counts.unsubscribed)} unsubscribed, {n(counts.staged)} staged.
           </section>
         )}
         {needle.length >= 2 && results.length === 0 && (
           <section className="panel empty">
             <b>No one matches &ldquo;{q}&rdquo;.</b>
-            They aren&apos;t in any shared sheet or the hashmap. <Link href="/check">Check a list</Link> to add new emails as staged.
+            They aren&apos;t in any shared sheet or on record. <Link href="/check">Check a list</Link> to add new emails as staged.
           </section>
         )}
         {results.map((r) => {
@@ -70,7 +70,7 @@ export default async function ContactsPage({ searchParams }: { searchParams: Pro
                     {STATUS_LABEL[doc.s as keyof typeof STATUS_LABEL]} · {doc.by} · {shortDate(doc.at)}
                   </span>
                 ) : (
-                  <span className="badge b-new">Not in the hashmap</span>
+                  <span className="badge b-new">Not contacted before</span>
                 )}
               </div>
               <p className="muted">{[r.email, r.org].filter(Boolean).join(" · ")}</p>

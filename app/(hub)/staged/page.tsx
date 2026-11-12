@@ -34,7 +34,7 @@ export default async function StagedPage({ searchParams }: { searchParams: Promi
       </section>
       {docs === null ? (
         <section className="panel empty">
-          <b>The hashmap couldn&apos;t be reached.</b>
+          <b>The database couldn&apos;t be reached.</b>
           Check the MongoDB connection and reload.
         </section>
       ) : docs.length === 0 ? (

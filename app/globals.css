@@ -329,7 +329,7 @@ tfoot td { font-weight: 700; border-top: 2px solid var(--rule-strong); border-bo
 
 .hide-lg { display: none; }
 .due { white-space: nowrap; }
-.empty { padding: 28px 0; color: var(--muted); }
+.empty { padding-top: 28px; padding-bottom: 28px; color: var(--muted); }
 .empty b { color: var(--ink); display: block; font-size: 15px; margin-bottom: 4px; }
 
 /* Login */

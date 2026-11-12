@@ -98,7 +98,7 @@ export default async function Overview({ searchParams }: { searchParams: Promise
             ))}
             {c && (
               <p className="panel-foot">
-                Hashmap: <b>{n(c.total)}</b> emails · {n(c.contacted)} contacted · {n(c.do_not_contact)} do not contact · {n(c.bounced)} bounced ·{" "}
+                <b>{n(c.total)}</b> emails on record · {n(c.contacted)} contacted · {n(c.do_not_contact)} do not contact · {n(c.bounced)} bounced ·{" "}
                 <Link href="/staged">{n(c.staged)} staged</Link>
               </p>
             )}

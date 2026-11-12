@@ -42,7 +42,7 @@ export const hubContext = cache(async (): Promise<HubContext> => {
     try {
       sync = await syncing;
     } catch (err) {
-      problems.push({ file: "hashmap", message: err instanceof QuotaError ? err.message : `Couldn't update the hashmap: ${(err as Error).message}` });
+      problems.push({ file: "hashmap", message: err instanceof QuotaError ? err.message : `Couldn't update the database: ${(err as Error).message}` });
     }
   }
   try {
@@ -59,7 +59,7 @@ export const hubContext = cache(async (): Promise<HubContext> => {
     Object.assign(bug, { thisWeek: w.total, lastWeek: l.total, today: t.total });
     c = cc;
   } catch (err) {
-    problems.push({ file: "hashmap", message: `Couldn't read the hashmap: ${(err as Error).message}` });
+    problems.push({ file: "hashmap", message: `Couldn't read the database: ${(err as Error).message}` });
   }
   const sent = data.campaigns.reduce((a, x) => a + x.sent, 0);
   const replied = data.campaigns.reduce((a, x) => a + x.replied, 0);

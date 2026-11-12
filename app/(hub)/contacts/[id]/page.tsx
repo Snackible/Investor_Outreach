@@ -46,7 +46,7 @@ export default async function InvestorPage({ params }: { params: Promise<{ id: s
               {STATUS_LABEL[doc.s as keyof typeof STATUS_LABEL]} · {doc.by} · {doc.bf ? "before tracking began" : shortDate(doc.at)}
             </span>
           ) : (
-            <span className="badge b-new">Not in the hashmap</span>
+            <span className="badge b-new">Not contacted before</span>
           ))}
       </div>
 

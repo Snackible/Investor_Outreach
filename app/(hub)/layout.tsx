@@ -54,7 +54,7 @@ export default async function HubLayout({ children }: { children: React.ReactNod
               </>
             ) : (
               <>
-                <b>{p.file === "hashmap" ? "Hashmap problem" : `Couldn't read ${p.file in FILE_LABEL ? FILE_LABEL[p.file as keyof typeof FILE_LABEL] : p.file}`}</b>
+                <b>{p.file === "hashmap" ? "Database problem" : `Couldn't read ${p.file in FILE_LABEL ? FILE_LABEL[p.file as keyof typeof FILE_LABEL] : p.file}`}</b>
                 <span className="muted">{p.message}</span>
               </>
             )}

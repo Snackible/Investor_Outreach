@@ -117,7 +117,7 @@ export async function syncHashmap(data: HubData, opts: { ifOlderThanMs?: number 
     return result;
   })()
     .catch((err: unknown) => {
-      lastSyncError = err instanceof QuotaError ? err.message : `Couldn't update the hashmap: ${(err as Error).message}`;
+      lastSyncError = err instanceof QuotaError ? err.message : `Couldn't update the database: ${(err as Error).message}`;
       throw err;
     })
     .finally(() => {
@@ -198,7 +198,7 @@ export async function checkEmails(raw: string, data: HubData): Promise<{ rows: C
       else {
         const domain = email.split("@")[1];
         const firm = firms.get(domain);
-        rows.push({ email, result: "new", detail: "Not in the hashmap", ...(firm && !/gmail|yahoo|hotmail|outlook|rediff/.test(domain) ? { sameFirm: firm } : {}) });
+        rows.push({ email, result: "new", detail: "Not contacted before", ...(firm && !/gmail|yahoo|hotmail|outlook|rediff/.test(domain) ? { sameFirm: firm } : {}) });
       }
     }
   }
