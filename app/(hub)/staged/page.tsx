@@ -6,7 +6,7 @@ import { RangePicker } from "@/components/RangePicker";
 import { StagedGroups } from "./StagedGroups";
 
 export default async function StagedPage({ searchParams }: { searchParams: Promise<{ range?: string; from?: string; to?: string }> }) {
-  const range = readRange(await searchParams, "all");
+  const range = readRange(await searchParams, "this-week");
   const all = await stagedEmails().catch(() => null);
   const docs = all?.filter((d) => inRange(d.at, range)) ?? null;
   const groups = new Map<string, { id: string; by: string; at: string; emails: string[] }>();

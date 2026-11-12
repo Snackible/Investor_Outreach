@@ -144,6 +144,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .topbar-end { margin-left: auto; display: flex; align-items: center; gap: 14px; color: var(--shell-muted); white-space: nowrap; }
 .topbar-end form button { background: none; border: 0; color: var(--shell-muted); cursor: pointer; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .topbar-end form button:hover { color: var(--shell-ink); }
+.build-version { color: inherit; opacity: 0.6; font-size: 12px; text-decoration: none; }
+.build-version:hover { opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
 
 /* Notify bell */
 .notify-bell { position: relative; }
@@ -354,6 +356,7 @@ tfoot td { font-weight: 700; border-top: 2px solid var(--rule-strong); border-bo
   .topbar { flex-wrap: wrap; height: auto; padding-top: 10px; gap: 6px 16px; }
   .nav { order: 3; width: 100%; height: 42px; }
   .topbar-end .who { display: none; }
+  .build-version { display: none; }
   .bug { grid-template-columns: repeat(6, minmax(0, 1fr)); min-height: 0; }
   .bug-bat { grid-column: span 3; padding: 8px 16px; }
   .bug-bat b { font-size: 34px; }

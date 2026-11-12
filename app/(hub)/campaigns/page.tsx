@@ -20,7 +20,7 @@ function dateInTabName(tab: string, now: Date) {
 
 export default async function CampaignsPage({ searchParams }: { searchParams: Promise<{ range?: string; from?: string; to?: string }> }) {
   const sp = await searchParams;
-  const range = readRange(sp, "all");
+  const range = readRange(sp, "this-week");
   const { data } = await hubContext();
   const first = await tabFirstMerged().catch(() => new Map<string, Date>());
   const now = new Date();

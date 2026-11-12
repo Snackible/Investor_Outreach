@@ -28,3 +28,9 @@ export const env = {
       .map(Number),
   sessionSecret: () => required("SESSION_SECRET"),
 };
+
+/** Commit the running build was deployed from, from Vercel's own env var. Null outside Vercel (e.g. local dev). */
+export function buildVersion(): { short: string; sha: string } | null {
+  const sha = process.env.VERCEL_GIT_COMMIT_SHA;
+  return sha ? { short: sha.slice(0, 7), sha } : null;
+}

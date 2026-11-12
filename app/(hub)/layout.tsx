@@ -2,6 +2,7 @@ import Link from "next/link";
 import { requireSession } from "@/lib/auth";
 import { hubContext } from "@/lib/hub";
 import { serviceAccountEmail } from "@/lib/google";
+import { buildVersion } from "@/lib/env";
 import { FILE_LABEL } from "@/lib/data";
 import { Nav } from "@/components/Nav";
 import { ThemeMenu } from "@/components/ThemeMenu";
@@ -15,6 +16,7 @@ export default async function HubLayout({ children }: { children: React.ReactNod
   const session = await requireSession();
   const ctx = await hubContext();
   const sa = serviceAccountEmail();
+  const version = buildVersion();
 
   return (
     <>
@@ -28,6 +30,11 @@ export default async function HubLayout({ children }: { children: React.ReactNod
           <NotifyBell items={ctx.followUps.due} overdue={ctx.followUps.overdue} />
           <ThemeMenu />
           <span className="who">{session.name}</span>
+          {version && (
+            <a className="build-version" href={`https://github.com/Snackible/Investor_Outreach/commit/${version.sha}`} target="_blank" rel="noreferrer" title={`Build ${version.sha}`}>
+              v{version.short}
+            </a>
+          )}
           <form action="/api/logout" method="post">
             <button type="submit">Sign out</button>
           </form>

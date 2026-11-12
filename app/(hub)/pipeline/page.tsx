@@ -9,18 +9,21 @@ import { PipelineTable } from "./PipelineTable";
 
 export default async function PipelinePage({ searchParams }: { searchParams: Promise<{ owner?: string; due?: string; sort?: string; field?: string; range?: string; from?: string; to?: string }> }) {
   const sp = await searchParams;
-  const range = readRange(sp, "all");
+  const range = readRange(sp, "this-week");
   const field = sp.field === "last" ? "last" : "next";
   const { data } = await hubContext();
   const fu = followUps(data);
   const now = new Date();
-  const counts = STAGES.map((s) => ({ stage: s, n: data.pipeline.filter((e) => e.stage === s).length }));
-  const unknown = data.pipeline.filter((e) => !e.stage).length;
+  const ownerParam = sp.owner && sp.owner !== "all" ? sp.owner : null;
+  const scoped = data.pipeline.filter((e) => (!ownerParam || e.owner === ownerParam) && inRange(field === "last" ? e.last : e.next, range));
+  const counts = STAGES.map((s) => ({ stage: s, n: scoped.filter((e) => e.stage === s).length }));
+  const unknown = scoped.filter((e) => !e.stage).length;
   const max = Math.max(1, ...counts.map((c) => c.n), unknown);
   const owners = [...new Set(data.pipeline.map((e) => e.owner))].sort();
+  const scopeLabel = [ownerParam, range.preset === "all" ? null : range.label].filter(Boolean).join(" · ");
 
   const dueKeys = new Set(fu.due.map((d) => d.key));
-  const rows = data.pipeline.filter((e) => inRange(field === "last" ? e.last : e.next, range)).map((e) => ({
+  const rows = scoped.map((e) => ({
     href: contactHref(e.email, e.key),
     due: dueKeys.has(e.key),
     key: e.key,
@@ -49,7 +52,7 @@ export default async function PipelinePage({ searchParams }: { searchParams: Pro
         <section className="panel">
           <div className="panel-head">
             <h2>Stages</h2>
-            <span>{data.pipeline.length} investors · one shared scale</span>
+            <span>{scoped.length} investors · one shared scale{scopeLabel ? ` · ${scopeLabel.toLowerCase()}` : ""}</span>
           </div>
           <div className="funnel">
             {counts.map((c) => (
@@ -87,7 +90,7 @@ export default async function PipelinePage({ searchParams }: { searchParams: Pro
                 </tr>
               </thead>
               <tbody>
-                {owners.map((o) => {
+                {(ownerParam ? owners.filter((o) => o === ownerParam) : owners).map((o) => {
                   const mine = fu.due.filter((d) => d.owner === o);
                   const open = data.pipeline.filter((e) => e.owner === o && isOpen(e)).length;
                   if (!open && !mine.length) return null;

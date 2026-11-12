@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { StageChip } from "@/components/StageChip";
 
@@ -25,11 +26,23 @@ type Row = {
 const date = (iso: string | null) => (iso ? new Date(iso).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "2-digit" }) : "–");
 
 export function PipelineTable({ rows, owners, stages, initialOwner, initialStage, rangeLabel }: { rows: Row[]; owners: string[]; stages: string[]; initialOwner: string; initialStage: string; rangeLabel: string | null }) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [owner, setOwner] = useState(initialOwner);
   const [stage, setStage] = useState(initialStage);
   useEffect(() => setOwner(initialOwner), [initialOwner]);
   useEffect(() => setStage(initialStage), [initialStage]);
   const [q, setQ] = useState("");
+
+  // The owner picked here is the page's scope: pushing it into the URL re-renders the
+  // Stages and Follow-ups panels above for the same owner, not just this table.
+  const pickOwner = (value: string) => {
+    setOwner(value);
+    const params = new URLSearchParams(searchParams.toString());
+    if (value === "all") params.delete("owner");
+    else params.set("owner", value);
+    router.push(`?${params.toString()}`, { scroll: false });
+  };
 
   const shown = useMemo(() => {
     const needle = q.trim().toLowerCase();
@@ -63,7 +76,7 @@ export function PipelineTable({ rows, owners, stages, initialOwner, initialStage
             <option key={s}>{s}</option>
           ))}
         </select>
-        <select className="inline" value={owner} onChange={(e) => setOwner(e.target.value)} aria-label="Owner">
+        <select className="inline" value={owner} onChange={(e) => pickOwner(e.target.value)} aria-label="Owner">
           <option value="all">Everyone</option>
           {owners.map((o) => (
             <option key={o}>{o}</option>
