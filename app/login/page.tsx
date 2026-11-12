@@ -14,7 +14,7 @@ export default async function LoginPage() {
           <small>Snackible</small>
           <b className="login-brand">
             <BrandMark size={38} />
-            Investor Hub
+            Investor Outreach
           </b>
         </div>
         <div className="bug-need">Outreach, replies and follow-ups</div>

@@ -21,7 +21,7 @@ export default async function HubLayout({ children }: { children: React.ReactNod
       <header className="topbar">
         <Link href="/" className="brand">
           <BrandMark />
-          Investor Hub
+          Investor Outreach
         </Link>
         <Nav />
         <div className="topbar-end">

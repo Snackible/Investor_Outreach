@@ -7,7 +7,7 @@ const saira = Saira({ subsets: ["latin"], weight: ["400", "600", "700"], variabl
 const sairaCondensed = Saira_Condensed({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--font-saira-condensed", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Investor Hub · Snackible",
+  title: "Investor Outreach · Snackible",
   description: "Investor outreach, duplicate checks and follow-ups for the Snackible fundraising team.",
   robots: { index: false, follow: false },
 };
